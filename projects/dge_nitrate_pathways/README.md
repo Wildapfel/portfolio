@@ -8,8 +8,13 @@ My idea of this project was to gain hands-on experience in analysing an rna-seq 
 - Start builing a reusable codebase for bioinformatics data analysis (integrating uni code snips from lectures/exercises)
 - Adapt to Snakemake
 
+*Workflow-Overview*:
+1. Data-Acquisition: Reference-Data and Experimental Data
+2. Prepare Reference-Data:  
+    2.2. 
+
+
 *Source*:  
 Public RNA-seq data from NCBI: [PRJNA750466](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA750466&o=acc_s%3Aa)
 
 
-*Workflow-Overview*
