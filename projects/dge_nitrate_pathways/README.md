@@ -8,7 +8,7 @@ My idea of this project was to gain hands-on experience in analysing an rna-seq 
 - Start builing a reusable codebase for bioinformatics data analysis (integrating uni code snips from lectures/exercises)
 - Adapt to Snakemake
 
-*Source*
+*Source*:  
 Public RNA-seq data from NCBI: [PRJNA750466](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA750466&o=acc_s%3Aa)
 
 
