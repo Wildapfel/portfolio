@@ -1,6 +1,6 @@
 # PROJECT: RNA-seq Analysis of ABF2 and ABF3 in Arabidopsis thaliana
 
-My idea of this project was to gain hands-on experience in analysing an rna-seq experiment with treatments and control groups from scratch. I wanted to understand the preprocessing steps in RNA-seq analysis, since we havent done that in detail at university. There we mainly focused on the DGE analysis itself and theoretical background and mathematical derivations. Furthermore, after some time processing the data, I realized the difficulty of just running tools manually for each experiment, hence I discovered Snakemake and learnt this on the fly.  
+My idea of this project was to gain hands-on experience in analysing an rna-seq experiment with treatments and control groups from scratch. I wanted to understand the preprocessing steps of the quantification data in RNA-seq analysis, since we havent done that in detail at university. There we mainly focused on the DGE analysis itself and theoretical background and mathematical derivations. Furthermore, after some time processing the data, I realized the difficulty of just running tools manually for each experiment, hence I discovered Snakemake and learnt this on the fly.  
 
 *Goals*:
 - Learn preprocessing steps of for rna-seq experiments
@@ -9,10 +9,16 @@ My idea of this project was to gain hands-on experience in analysing an rna-seq 
 - Adapt to Snakemake
 
 *Workflow-Overview*:
-1. Data-Acquisition: Reference-Data and Experimental Data
+1. Data-Acquisition: 
+    Reference-Data and Experimental Data
 2. Prepare Reference-Data:  
-    2.2. 
-
+    Index the transcriptomic data of the Arabidopsis thalian with Kallisto
+3. QC & Trimming: 
+    Evaluate the RNA-seq data with fastqc and trim with seqtk
+4. Quantification:
+    Map processed reads to Transcriptome with Kallisto
+5. Data preprocessing:
+    Normalize, log2transform and plot inspection
 
 *Source*:  
 Public RNA-seq data from NCBI: [PRJNA750466](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA750466&o=acc_s%3Aa)
