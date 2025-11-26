@@ -18,8 +18,7 @@
     <!--  -->
     <h1> 📊 Genome-wide association studies 📊 </h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/GWAS/barley_quantitiative" >
-        <source> Identifying QTL's for marker assisted selection in barley population </source><br>
-        <source> using GWAS </source>
+        <source> Identifying QTL's for marker assisted selection in barley population using GWAS </source>
     </a>
     <br>
     <small><i> Quantitative Phenotype Traits • Genotype Data </i></small><br>    
