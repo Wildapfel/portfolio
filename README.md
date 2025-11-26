@@ -75,6 +75,3 @@
         UPCOMING
     </strong>
 </div>
-
-
-1
