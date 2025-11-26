@@ -63,6 +63,17 @@
         <br>  
         UPCOMING
     </strong>
+    <!--  -->
+    <!-- Section: Sequential Modelling -->
+    <!--  -->
+    <h1>🔬 Sequential Modelling 🔬</h1>
+    <strong>
+        Quantitative Image-Analysis of Blastomeres in the Early Embryonic Development 
+        <br>
+        of <i>Macrstomum lignano</i>        
+        <br>  
+        UPCOMING
+    </strong>
 </div>
 
 
