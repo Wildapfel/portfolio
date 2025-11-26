@@ -1,0 +1,9 @@
+enrich_go:
+    input:        "[paths.exp]/05_counts_merged_dge/control_{group}/deseq2_control_{group}.csv"
+    output:       "[paths.exp]/06_counts_merged_goea/{group}/{ont}/{ont}_df_{sorted}_top_{n_top_genes}_control_{group}.pdf"
+    params:
+        org:        "Arabidopsis"
+        onts:       ["BP", "MF", "CC"]
+        sorted:     ["abs", "up", "down"]
+        top_genes:  ["100", "500", "1000"]
+        group:      ["abf2", "abf3"]

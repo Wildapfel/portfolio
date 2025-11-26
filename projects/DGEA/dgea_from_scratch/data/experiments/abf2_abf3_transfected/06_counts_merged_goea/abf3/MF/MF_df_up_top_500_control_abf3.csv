@@ -1,0 +1,2 @@
+"ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"GO:0043138","3'-5' DNA helicase activity","4/475","15/26722",0.266666666666667,15.0018245614035,7.2971123143178,0.000115178688133983,0.0498723719620145,0.0459502345292415,"AT1G31360/AT1G35530/AT5G27680/AT3G05740",4

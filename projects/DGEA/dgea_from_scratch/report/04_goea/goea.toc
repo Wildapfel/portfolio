@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Summary}{1}{section.1}%
+\contentsline {paragraph}{ABF2 and ABF3 play major role in increased cell division and transcriptional activity as reponse to nitrate stress}{1}{section*.2}%
+\contentsline {paragraph}{Shared roles}{1}{section*.3}%
+\contentsline {paragraph}{Different roles}{1}{section*.4}%
+\contentsline {paragraph}{Cooridnated Roles}{1}{section*.5}%
+\contentsline {section}{\numberline {2}Control vs ABF2}{2}{section.2}%
+\contentsline {section}{\numberline {3}Control vs ABF3}{5}{section.3}%

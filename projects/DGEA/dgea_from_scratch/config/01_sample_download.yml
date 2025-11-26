@@ -1,0 +1,8 @@
+download:
+    samples:
+        experiments:
+            abf2:               SRR15286160 SRR15286161 SRR15286162
+            abf3:               SRR15286157 SRR15286158 SRR15286159
+            control:            SRR15286164 SRR15286165 SRR15286166
+        out_dir:                "[paths.exp]/01_raw_reads/{exp}"
+        output:                 "[paths.exp]/01_raw_reads/{exp}/{acc}.fastq.gz"

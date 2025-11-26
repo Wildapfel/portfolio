@@ -1,0 +1,4 @@
+fastqc:
+    input:  "[paths.exp]/01_raw_reads/{exp}/{acc}.fastq.gz"
+    output: "[paths.exp]/02_raw_reads_qc/{exp}/{acc}_fastqc.html"
+

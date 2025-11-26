@@ -1,0 +1,317 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+\pagestyle{empty}
+
+
+\begin{document}
+	
+	% Titleplage
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: GOEA} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	\tableofcontents
+	\bigskip  
+	\bigskip  
+	\hrule
+	
+	\section{Summary}
+	
+		\paragraph{ABF2 and ABF3 play major role in increased cell division and transcriptional activity as reponse to nitrate stress}
+	
+		\begin{itemize}
+			\item This findings supports the fact, that nitrogen is key signal in cell growth and absorbs nitrate at the root
+			\item The GOEA suggests that ABF2 and ABF3 share major functionality but also divide there tasks, coordinating the response cascade 
+		\end{itemize}
+	
+		\paragraph{Shared roles}
+			\begin{itemize}
+				\item Both seem to down regulate the maintenance program of the chromosome and upregulating RNA synthesis
+				\item Both seems to up regulate cell division, RNA programs and down regulating cell shaping processes (actin formation)
+				\item Both acting on ATP regulation
+				\item Both acting on enzymes: Down regulating Isomerase, Dow regulating Nucleases, Up regulating helicases
+			\end{itemize}
+		
+		\paragraph{Different roles} \
+		
+			ABF2		
+			\begin{itemize}
+				\item Down regulates Chromatin, 
+			\end{itemize}
+			
+			ABF§ 
+			\begin{itemize}
+				\item Down regulates Microtubuli, up regulating Peptidase, down regulating environmental stimuli
+			\end{itemize}
+			
+		\paragraph{Cooridnated Roles}
+			\begin{itemize}
+				\item ABF2 seems to stronger act on the down regulation of Heterochromatin, whereas ABF3 acts on the upregulation of euchromatin
+			\end{itemize}
+	
+	\newpage
+		
+	\def \base {"../../data/experiments/abf2_abf3_transfected/06_counts_merged_goea/abf2/"}
+	
+	\section{Control vs ABF2}
+
+		% CC
+		\subsection*{CC - down}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+			
+			\begin{itemize}
+				\item Downregulation on the Chromsomal level (high significance and GeneRatio) and cytoskeleton level (lower significance and GeneRatio)
+				\item Supporting the idea that DNA specific activity is reduced as well cell shapig
+			\end{itemize}
+			
+			
+			
+		\subsection*{CC - up}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+			
+		\begin{center}
+			\begin{itemize}
+				\item Upregulation of the nucleolus term with reasonable significance and GeneRatio
+				\item Suggests an increase in the synthesis of RNA 
+			\end{itemize}
+		\end{center}
+			
+		\subsection*{Interpretation}	
+		\begin{itemize}
+			\item Cell's attention moving away from genome maintenance towards the production of RNA molecules 
+		\end{itemize}
+			
+		\newpage
+		
+	
+	
+		% BP
+		\subsection*{BP - down}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+			
+		\begin{itemize}
+			\item Downregulation of mostly chromosomal processes like DNA damage response, DNA repair or Chromatin remodeling like heterochromatin formation 
+			\item Downregulation of negative regulation of gene expression
+			\item Suggesting that the Chromosome is leaving the state where it is hardly accessible to protein synthesis
+		\end{itemize}
+			
+		
+		\subsection*{BP - up}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+		
+		\begin{itemize}
+			\item Upregulation of cell shaping process like actin filament organization or actin cytoskeleton organization (but with lower significance) 
+			\item Upregulation o Cell devision terms like DNA recombination or meiosis I cell cycle process 
+			\item Upregulation of RNA terms like RNA 3'-end organization
+
+		\end{itemize}
+		
+		\subsection*{Interpretation}
+			\begin{itemize}
+				\item The biological Process GO terms align with th cellular component GO terms, suggesting that the Cell's going into a state of increased Cell division and transcriptional activity an leaving the maintenance state 
+			\end{itemize}
+		
+		
+		\newpage
+		
+		% MF
+		\subsection*{MF - down}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+				
+			\begin{itemize}
+				\item Downregulation of ATP hydrolysis activity (most significant term) and Polymerase activity 
+				\item Both downregulation are a little contradictory to what I would expect
+				\item What aligns is the downregulation of histone modifying activity
+			\end{itemize}
+		
+		\subsection*{MF - up}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_100_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_500_control_abf2.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_1000_control_abf2.pdf}
+				\end{tabular}
+			\end{center}
+				
+			\begin{itemize}
+				\item Upreguated terms mostly allign with the previous interpreations, increased isomerase activity, nuclease activity or ATP-dependent activity acting on DNA and other enzymes
+			\end{itemize}
+	
+		\subsection*{Interpretation}
+			\begin{itemize}
+				\item Since ATP hydrolysis consumes ATP (downregulated) but ATP-dependent activity acting on DNA is upregulated, would could conclude, that the DNA is preserving those ATP molecules from the general housekeeping and moving the energy towards cell division specific tasks
+			\end{itemize}
+	
+		\def \base {"../../data/experiments/abf2_abf3_transfected/06_counts_merged_goea/abf3/"}
+		\def \sample {abf3}
+		
+	\section{Control vs ABF3}
+		
+		% CC
+		\subsection*{CC - down}
+		\begin{center}
+			\begin{tabular}{ccc}
+				Top 100 & Top 500 & Top 1000 \\
+				\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_100_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_500_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/CC/CC_df_down_top_1000_control_\sample.pdf}
+			\end{tabular}
+		\end{center}
+		
+		\begin{itemize}
+			\item Detailed GO terms in the top 100 downregulated genes, might allowing a precise localization of the ATF3 activity
+			\item Top 1000 downregulated GO terms similiar to the ABF2 terms, additionally on can see the microtubule cytoskeleton term, 
+			again suggestin downregulation of cell shape (or elongation)
+		\end{itemize}
+		
+		
+		
+		\subsection*{CC - up}
+		\begin{center}
+			\begin{tabular}{ccc}
+				Top 100 & Top 500 & Top 1000 \\
+				\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_100_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_500_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/CC/CC_df_up_top_1000_control_\sample.pdf}
+			\end{tabular}
+		\end{center}
+		
+		\begin{center}
+			\begin{itemize}
+				\item The localization of upregulation seems not very clear, since only top 100 genes reveal 2 terms, with low significance
+			\end{itemize}
+		\end{center}
+		
+		\subsection*{Interpretation}	
+		\begin{itemize}
+			\item ABF2 had GO terms of downreguation of heterochromatin, now we see that the ABF3 sample seems to be active in euchromatin related tasks, suggesting a activity coordination of both TFs
+		\end{itemize}
+		
+		\newpage
+		
+		
+		% BP
+		\subsection*{BP - down}
+		\begin{center}
+			\begin{tabular}{ccc}
+				Top 100 & Top 500 & Top 1000 \\
+				\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_100_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_500_control_\sample.pdf} &
+				\includegraphics[scale=0.3]{\base/BP/BP_df_down_top_1000_control_\sample.pdf}
+			\end{tabular}
+		\end{center}
+		
+		\begin{itemize}
+			\item Similiar to the ABF2 downregulation
+			\item What seems to be outstanding is the cellular response to abiotic and environmental stimulus (high significance and GeneRatio)
+			\item Suggesting that the cell is not in a state looking for stimuli rather in a state of acting on stimuli
+		\end{itemize}
+		
+		
+		\subsection*{BP - up}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_100_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_500_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/BP/BP_df_up_top_1000_control_\sample.pdf}
+				\end{tabular}
+			\end{center}
+			\begin{itemize}
+				\item Almost analog to the ABF2 activity
+			\end{itemize}
+			
+		\begin{itemize}
+			\item Since the term of negative regulation of gene expression appears in both types of regulation, suggesting that there happens a transcriptional porgram shift (downregulation of a maintenance gene cascade towards a division gene cascade)
+		\end{itemize}
+			
+		\newpage
+		
+		% MF
+		\subsection*{MF - down}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_100_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_500_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_down_top_1000_control_\sample.pdf}
+				\end{tabular}
+			\end{center}
+			
+			\begin{itemize}
+				\item Analog to the ABF2 with an addtional enzyme: Peptidase
+			\end{itemize}
+		
+		\subsection*{MF - up}
+			\begin{center}
+				\begin{tabular}{ccc}
+					Top 100 & Top 500 & Top 1000 \\
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_100_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_500_control_\sample.pdf} &
+					\includegraphics[scale=0.3]{\base/MF/MF_df_up_top_1000_control_\sample.pdf}
+				\end{tabular}
+			\end{center}
+			\begin{itemize}
+				\item Also analog two the ABF2 upregulated GO Terms
+			\end{itemize}
+		
+		\subsection*{Interpretation}
+		\begin{itemize}
+			\item Suggest that ABF2 and ABF3 are close players in the upregulation of cell division, where both TFs seem to have slightly different roles especially on what enzymes they act
+		\end{itemize}
+		
+		
+\end{document}

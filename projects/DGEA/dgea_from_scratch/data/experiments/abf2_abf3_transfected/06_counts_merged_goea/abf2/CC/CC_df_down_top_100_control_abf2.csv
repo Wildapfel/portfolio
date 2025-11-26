@@ -1,0 +1,2 @@
+"ID","Description","GeneRatio","BgRatio","RichFactor","FoldEnrichment","zScore","pvalue","p.adjust","qvalue","geneID","Count"
+"GO:0005643","nuclear pore","3/100","46/26902",0.0652173913043478,17.5447826086957,6.85993384647326,0.00067362034640347,0.0478270445946464,0.0460898131749743,"AT5G51200/AT1G79280/AT1G72560",3

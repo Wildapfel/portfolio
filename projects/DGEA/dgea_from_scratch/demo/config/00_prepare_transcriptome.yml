@@ -1,0 +1,14 @@
+# Download reference transcriptome (emsembel)
+download:
+    transcriptome: 
+        url:            "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/arabidopsis_thaliana/cdna/Arabidopsis_thaliana.TAIR10.cdna.all.fa.gz"
+        file_name:      "Arabidopsis_thaliana.TAIR10.cdna.all"
+        out_dir:        "[paths.ref]/transcriptome"
+        output:         "[download.transcriptome.out_dir]/[download.transcriptome.file_name].fa"  
+  
+# Create Kallisto index of reference transcriptome
+index:
+    kallisto:
+        transcriptome:   "[paths.ref]/transcriptome/[download.transcriptome.file_name].fa"
+        output:          "[paths.ref]/transcriptome/kallisto/[download.transcriptome.file_name].kai"
+

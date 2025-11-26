@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+\pagestyle{empty}
+
+
+\begin{document}
+	
+	% Titleplage
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: DeSeq2} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	\tableofcontents
+	\bigskip  
+	\bigskip  
+	
+	\hrule
+	
+	\section{Summary}
+	
+		\begin{tabular}{ll}
+		
+		// Control vs ABF2:	& - DeSeq2 fits very good \\[0.5cm]
+		
+		// Control vs ABF322:	& - DeSeq2 fits very good 
+		
+		
+	\end{tabular}
+	\newpage
+	
+	\section{Control vs ABF2}
+	
+		\subsection{Sample QC }
+	
+			\begin{center}
+				\begin{tabular}{cc}
+					\includegraphics[scale=0.35]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf2/sample_qc/pca_control_abf2.png"} & 
+					\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf2/sample_qc/sd_control_abf2.png"} 
+				\end{tabular}
+			\end{center}
+			
+			\subsection{Gene QC}
+			
+				\begin{tabular}{cc}
+					\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf2/gene_qc/disp_est_control_abf2.png"} & 
+					\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf2/gene_qc/ma_control_abf2.png"} 
+				\end{tabular}
+			
+			\subsection{Vulcano}
+				\begin{center}
+					\includegraphics[scale=0.6]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf2/vulcano/vulcano_control_abf2.png"} 
+				\end{center}
+	
+
+	\section{Control vs ABF3}
+	
+		\subsection{Sample QC }
+			\begin{center}
+				\begin{tabular}{cc}
+					\includegraphics[scale=0.35]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf3/sample_qc/pca_control_abf3.png"} & 
+					\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf3/sample_qc/sd_control_abf3.png"} 
+				\end{tabular}
+			\end{center}
+	
+		\subsection{Gene QC}
+			\begin{tabular}{cc}
+				\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf3/gene_qc/disp_est_control_abf3.png"} & 
+				\includegraphics[scale=0.3]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf3/gene_qc/ma_control_abf3.png"} 
+			\end{tabular}
+			
+		\subsection{Vulcano}
+			\begin{center}
+				\begin{tabular}{cc}				
+					\includegraphics[scale=0.5]{"../../data/experiments/abf2_abf3_transfected/05_counts_merged_dge/control_abf3/vulcano/vulcano_control_abf3.png"} 
+				\end{tabular}
+			\end{center}
+			
+			
+		
+	
+\end{document}

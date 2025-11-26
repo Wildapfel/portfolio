@@ -1,0 +1,61 @@
+from src.config_resolver import ResolveConfig
+from src.all_targets_resolver import ResolveAllTargets
+import os, sys
+
+#
+# Addressing the configfile like this, might now be possible,
+# since this workflow lifes in the HUB 
+#
+# configfile: "../config/config.yml"
+
+
+#
+# Create a custom config (cfg) from a config.yml.
+# Due to some path syntax, I must call a function 
+# to resolve this paths within the config.yml.
+#
+rc = ResolveConfig(config)
+cfg = rc.resolve_config(config)
+
+#
+# Declare Wildcards in separate files. 
+# This is the programmatic part here, 
+# you can code that yourself, or use from
+# snakemake.io the glob_widlacards function,
+# if this matches your workflow.
+#
+try:
+    wildcard_file = cfg["wildcards_file"]
+    wildcard_dir = os.path.dirname(wildcard_file)
+    sys.path.append(wildcard_dir)
+    root = os.getcwd()
+    os.chdir(wildcard_dir)
+    from _wildcards import init_wildcards
+    os.chdir(root)
+    WILDCARDS_DICT = init_wildcards(cfg)
+except ImportError as e:
+    os.chdir(root)
+    WILDCARDS_DICT = {}
+    print("No _wildcards.py declared. Wildcard is empty.")
+    print(e)
+
+#
+# import all rules, if possible
+#
+for rule in os.listdir("./rules"):
+    include: f"./rules/{rule}"
+
+
+#
+# fetch targets from config
+#
+ALL_TARGETS = ResolveAllTargets(cfg, WILDCARDS_DICT).get_all_targets(cfg)
+
+
+#
+# targets
+#
+rule targets:
+    input:
+        ALL_TARGETS,
+       

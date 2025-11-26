@@ -1,0 +1,7 @@
+name: run_notebooks
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - jupyter
+  - papermill

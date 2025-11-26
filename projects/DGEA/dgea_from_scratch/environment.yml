@@ -1,0 +1,8 @@
+#
+# Just to get snakemake access
+#
+name: dge_from_scratch
+channels:
+  - conda-forge
+dependencies:
+  - snakemake

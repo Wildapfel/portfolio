@@ -1,0 +1,19 @@
+deseq2:
+    input:      "[paths.exp]/04_counts_merged/merged_est_counts_int.csv" 
+    out_dir:    "[paths.exp]/05_counts_merged_dge/"
+    output:     
+        table:  "[deseq2.out_dir]/control_{condition}/deseq2_control_{condition}.csv"
+        disp_est:   "[deseq2.out_dir]/control_{condition}/gene_qc/disp_est_control_{condition}.png"
+        ma:     "[deseq2.out_dir]/control_{condition}/gene_qc/ma_control_{condition}.png"
+        sd:     "[deseq2.out_dir]/control_{condition}/sample_qc/sd_control_{condition}.png"
+        pca:    "[deseq2.out_dir]/control_{condition}/sample_qc/pca_control_{condition}.png"
+    gene_col:   "target_id"
+    control:    "control"
+    condition:                      
+        - abf2
+        - abf3
+
+plot:
+    dge_vulcano:
+        input:  "[deseq2.output.table]"
+        output: "[paths.exp]/05_counts_merged_dge/control_{condition}/vulcano/vulcano_control_{condition}.png"

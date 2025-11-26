@@ -1,0 +1,6 @@
+name: kallisto-env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - kallisto

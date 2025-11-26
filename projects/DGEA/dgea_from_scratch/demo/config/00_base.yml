@@ -1,0 +1,13 @@
+# Declare paths, that I referencce to also in other declarations 
+# within this .yml
+paths:
+    base:                       "Not set. Either use the init_config_base_dir.py or just set here 'manually'."
+    ref:                        "[paths.base]/data/reference" 
+    exp:                        "[paths.base]/data/experiments/abf2_abf3_transfected" 
+    raw_data:                   "[paths.exp]/01_raw_reads"
+    
+
+# Defines array with specfiy names (wildcards), especially for the 
+# exerperiments and accession number (exp, acc)
+wildcards_file:                 "[paths.base]/config/_wildcards.py"
+

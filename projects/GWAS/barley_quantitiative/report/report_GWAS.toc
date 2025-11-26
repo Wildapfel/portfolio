@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Summary}{1}{section.1}%
+\contentsline {section}{\numberline {2}Phenotype}{2}{section.2}%
+\contentsline {section}{\numberline {3}GWAS}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Model Evalutation}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Manhattan Plots}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Analysis}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Significant Marker}{7}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Marker-assisted selection (trait prediction)}{9}{section.4}%
+\contentsline {section}{\numberline {5}Breeding-Implications}{9}{section.5}%

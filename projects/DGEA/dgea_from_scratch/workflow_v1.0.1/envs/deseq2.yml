@@ -1,0 +1,17 @@
+#
+# Note:
+# I tried many combinations to install the conda deseq2 version.
+# I ran multiple times into a the following error: 
+# post-link script failed for package bioconda::bioconductor-genomeinfodbdata-1.2.9-r42hdfd78af_0
+# Looking at anaconda.org, I saw that the linux version is supoorted,
+# up to version 1.16. Resolving the dependencies like I am doing here,
+# solved the issue, but might not be the latest version.
+#
+name: r-deseq2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconductor-genomeinfodb=1.16.0 
+  - bioconductor-deseq2=1.20.0

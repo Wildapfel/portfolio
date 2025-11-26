@@ -1,0 +1,8 @@
+name: r_bio
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - bioconductor-deseq2
+  - r-stringr

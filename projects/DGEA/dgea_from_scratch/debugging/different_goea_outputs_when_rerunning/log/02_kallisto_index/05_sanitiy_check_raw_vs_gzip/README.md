@@ -1,0 +1,3 @@
+# Sanity check .. 
+- I also checked if there is a difference in the quant output when using .fastq vs fastq.gz
+- As expected also no di difference ....

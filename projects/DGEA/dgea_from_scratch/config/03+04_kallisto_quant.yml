@@ -1,0 +1,40 @@
+quant:
+    kallisto:
+        end:                        "single"
+        length:                     "200"   # standard practice with the instrument
+        sd:                         "20"    # as well 
+        ref:                        "[paths.ref]/transcriptome/kallisto/Arabidopsis_thaliana.TAIR10.cdna.all.kai"
+        fasta_files:                "[paths.exp]/01_raw_reads/{exp}/{acc}.fastq.gz"
+        output:                     "[paths.exp]/03_counts/{exp}/{acc}/abundance.tsv"
+
+#
+# Merge the abundance.tsv tables from the pseudo-alingn output
+#
+merge:
+    kallisto:
+        tables:                     "[quant.kallisto.output]"
+        out_dir:                    "[paths.exp]/04_counts_merged"
+        output:                     "[merge.kallisto.out_dir]/merged_{metric}.csv"
+        metrics:                     [est_counts, tpm] 
+        exp_names:                   [abf2, abf3, control] 
+        new_labels:                  [control.1, control.2, control.3, abf2.1, abf2.2, abf2.3, abf3.1, abf3.2, abf3.3]
+
+postprocess:
+    kallisto:
+        input:                      "[paths.exp]/04_counts_merged/merged_{metric}.csv"
+        output:            
+            merged_est_counts_int:  "[merge.kallisto.out_dir]/merged_est_counts_int.csv"     
+            merged_tpm_log2:        "[merge.kallisto.out_dir]/merged_tpm_log2.csv"
+
+plot:
+    quant_qc:
+        input:                      
+            eda:                    "[postprocess.kallisto.output.merged_tpm_log2]"
+            pca:                    "[merge.kallisto.out_dir]/merged_tpm.csv"
+        output:                     
+            eda:                    "[paths.exp]/04_counts_merged/sample_qc/merged_tpm_log2/{eda}.png"
+            pca:                    "[paths.exp]/04_counts_merged/sample_qc/merged_tpm/pca/pca.png"
+        params:
+            eda:                    ["boxplots", "histograms", "scatter-matrix", "histograms-single-plot",
+                                     "histograms-cum", "mean-of-cols", "std-of-cols"] # pearson-r not imlemented yet, but scatter-matrix also included r
+            pca:                    "pca-with-labels"

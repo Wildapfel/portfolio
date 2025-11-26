@@ -1,0 +1,278 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{10pt}
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+\pagestyle{empty}
+
+
+\begin{document}
+	
+	% Titleplage
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: Fastqc Raw Reads} \vspace{0.5cm}
+		\hrule
+	\end{center}
+
+
+	\tableofcontents
+
+
+	\section{Summary}
+		\begin{tabular}{ll}
+			// Overall Quality: 	& - Perfect \\[0.5cm]
+			// Trimming: 			& - Not necessary, since PHRED-Score $>$ 30 and just a couple outliers at the very end\\[0.5cm]
+			// Adapter Removal:		& - Not necessary, it is perfect 		\\[0.5cm]
+			// Duplicates:			& - Some Peaks appear at $>$10 (very strong peak in ABF2 SRR15286162)\\
+									& - Otherwise no difference between Control and Treatment (quantitatively similar) \\
+									& - This could align with the expected transcriptional program from the nitrate stress \\
+									&    (either control or treatment) \\
+									& - ABF2 SRR15286162  might be a sample-specific outlier \\[0.5cm]
+			// RNA-seq specific:	& - The A/T and C/G distributions at the beginning of the sequence is not equally \\
+									&   distributed, but this is excepted \\
+									& - Furthermore, sequence content extremely consistent (aligns with biological property) \\
+									& - GC content distribution shows two stronger peaks, but this should align with \\
+									&  the over-expression of certain genes 
+		\end{tabular}
+	
+	\newpage
+	
+	
+	\def\qc{per_base_quality}
+	\section{Per Base Quality}
+		
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+	
+		\newpage
+	
+	
+	
+	\def\qc{per_sequence_quality}
+	\section{Per Sequence Quality}
+	
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+		
+		\newpage
+	
+	
+	\def\qc{adapter_content}
+	\section{Adapter Content}
+		
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.15]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+			distributed
+		\newpage
+		
+	
+		
+	
+	\def\qc{duplication_levels}
+	\section{Duplication Level}
+	
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+		
+	\newpage
+	
+	
+	\def\qc{per_sequence_gc_content}
+	\section{GC Content}
+	
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+	\newpage
+	
+	
+	\def\qc{per_base_sequence_content}
+	\section{Sequence Content}
+	
+		$\bullet$ Control
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286164 & SRR15286164 & SRR15286164 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286164_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286165_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/control/SRR15286166_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		$\bullet$ ABF2
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286160 & SRR15286161 & SRR15286162 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286160_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286161_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf2/SRR15286162_fastqc/\qc.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		
+		$\bullet$ ABF3
+		\begin{center}
+			\begin{tabular}{ccc}
+				SRR15286157 & SRR15286158 & SRR15286159 \\
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286157_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286158_fastqc/\qc.png"} &
+				\includegraphics[scale=0.18]{"../../data/experiments/abf2_abf3_transfected/02_raw_reads_qc/abf3/SRR15286159_fastqc/\qc.png"}
+			\end{tabular}
+		\end{center}
+				
+
+
+\end{document}

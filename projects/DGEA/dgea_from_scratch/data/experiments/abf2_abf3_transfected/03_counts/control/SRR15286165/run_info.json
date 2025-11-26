@@ -1,0 +1,14 @@
+{
+	"n_targets": 48359,
+	"n_bootstraps": 0,
+	"n_processed": 23244986,
+	"n_pseudoaligned": 17271571,
+	"n_unique": 9756548,
+	"p_pseudoaligned": 74.3,
+	"p_unique": 42.0,
+	"kallisto_version": "0.51.1",
+	"index_version": 13,
+	"k-mer length": 31,
+	"start_time": "Fri Nov  7 08:42:17 2025",
+	"call": "kallisto quant --single -l 200 -s 20 -o /run/media/maxpetzold/HDD_5TB/HUB/Wildapfel/dge_from_scratch/data/experiments/abf2_abf3_transfected/03_counts/control/SRR15286165 -i /run/media/maxpetzold/HDD_5TB/HUB/Wildapfel/dge_from_scratch/data/reference/transcriptome/kallisto/Arabidopsis_thaliana.TAIR10.cdna.all.kai /run/media/maxpetzold/HDD_5TB/HUB/Wildapfel/dge_from_scratch/data/experiments/abf2_abf3_transfected/01_raw_reads/control/SRR15286165.fastq.gz"
+}

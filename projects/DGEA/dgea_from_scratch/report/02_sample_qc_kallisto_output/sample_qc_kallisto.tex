@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+\pagestyle{empty}
+
+
+\begin{document}
+	
+	% Titleplage
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: Sample QC Kallisto Quantification} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	\tableofcontents
+	\bigskip  
+	\bigskip  
+	
+	\hrule
+	
+	\section{Summary}
+		
+			\begin{tabular}{ll}
+			
+			// PCA: 			& - Separates all groups clearly distinguishable  \\
+								& - Especially ABF2 and ABF3 are clearly distinguishable \\
+								& - Supports different transcriptional programs between both TFs \\ [0.5cm]
+			
+			// Distributions:	& - Shows that abf2.1 is a potential outlier (just slightly) \\
+								& - Interestingly, this does not align with the higher duplicates in the fastqc of the raw reads \\[0.5cm]
+								
+			// Correlations: 	& - Also suggest that abf2.1. is slightly different then the rest of the group
+		
+		\end{tabular}
+	
+	
+	
+	\newpage
+	
+	\section{PCA}
+
+		\begin{center}
+			\includegraphics[scale=0.5]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm/pca/pca.png"}
+		\end{center}
+
+
+	\section{Expression-Profile-Distributions}
+		
+		\begin{center}
+			\begin{tabular}{cc}
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/boxplots.png"} &
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/mean-of-cols.png"} \\
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/std-of-cols.png"} &
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/histograms-cum.png"} \\
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/histograms-single-plot.png"} &
+				\includegraphics[scale=0.37]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/histograms.png"} \\
+			\end{tabular}
+		\end{center}
+
+	\section{Gene-Expression-Correlation}
+	
+		\begin{center}
+			\includegraphics[scale=0.55]{"../../data/experiments/abf2_abf3_transfected/04_counts_merged/sample_qc/merged_tpm_log2/scatter-matrix.png"}
+		\end{center}
+	
+	
+
+\end{document}

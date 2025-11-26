@@ -1,0 +1,25 @@
+download:
+    transcriptome:
+        url:
+            "url to reference transcriptome of organism"
+        file_name:
+            "file name of output"
+        out_dir:
+            "output directory"
+        output:
+            "out_dir + file_name + filetype"
+    rna_seq:
+        experiments:
+            <name of experiment 1>:
+              - SRR1
+              - SRR2
+              - ....
+            <name of experiment 2>:
+              - SRR1
+              - SRR2
+              - ....
+            ....
+        out_dir:
+            output directory
+        output:
+            "out_dir + file_name + filetype" # wildcarded

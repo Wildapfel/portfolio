@@ -1,0 +1,10 @@
+name: py_bio
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - kallisto
+  - sra-tools
+  - pandas
+  - matplotlib
