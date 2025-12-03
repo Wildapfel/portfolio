@@ -1,0 +1,7 @@
+name: GWAS-env
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - numpy
+  - scikit-learn

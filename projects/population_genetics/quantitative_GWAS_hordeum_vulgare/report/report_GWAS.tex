@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+\usepackage{setspace}
+
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+%\pagestyle{empty}
+
+\def\spacing{\itemsep 0.0cm}
+
+\begin{document}
+	
+	% Titleplage
+%	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: Quantitative GWAS of barley breeding} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	
+	\tableofcontents
+	
+	\bigskip\bigskip\hrule
+	
+	\section{Summary}
+		
+		\textbf{About}
+		\begin{itemize}\spacing
+			\item I run GAPIT on the quantitative barley traits and the genotype data from a barley population
+			\item I also implemented the core functionality of a GWAS, expecially for understanding the linear regression of the markers
+		\end{itemize}
+		
+		\textbf{Data}
+		\begin{itemize}\spacing
+			\item This data was provided by the MLU Halle during my master programme 
+			\item Quantitative phenotype traits and a genotype matrix for multiple breed lines and multiple markers of Chromosome 2 in barely
+			\item[] \begin{tabular}{lll}
+					HEA &= Heading date                		&(Ährenschieben) \\
+					TGW &= Thousand Grain Weights      		&(Tausendkorngewicht) \\
+					HEI &= Height                      		&(Höhe) \\
+					RIP &= Ripening time               		&(Reifedauer) \\
+					PM  &= Powdery Mildew Susceptibility   	&(Mehltauafälligkeit)
+					\end{tabular}
+		\end{itemize}
+
+		
+		\textbf{Quantitative Traits (Phenotype)}
+		\begin{itemize}\spacing
+			\item Normally distribution of HEA, TGW, HEI and RIP (potential poly genetic orchestration)
+			\item Bimodal distribution of PM, hint for a genetically distinct groups in the population 
+			\item Strong anti correlation between HEA and RIP
+			\item Weak correlation between TGW and RIP
+			\item Weak correlation between TGW and HEA
+		\end{itemize}
+		
+		\textbf{GWAS-Manhattan}
+		
+	\newpage	
+		
+		
+		
+	\section{Phenotype}
+	
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[scale=0.7]{"./plots/scatter_phenotype.png"}
+		\end{figure}
+	
+		KDE
+		\begin{itemize}\spacing
+			\item All properties beside the PM are almost normally distributed (unimodal)
+			\item These properties seems to undergo a complex genetic orchestra
+			\item Instead, PM shows a bimodal shaped distriubtion, hence one might argue that there exist two distinct populations (or genetic patterns), the majority has a strong resisitance where a minority is more susceptible
+		\end{itemize}
+	
+		TGW $\times$ RIP
+		\begin{itemize}\spacing
+			\item If the desired trait is a greater croop (yields more food), one can clearly see that TGW (Thousand Grain Weight) slightly correlates with the RIP (Ripening Time)
+			\item The crop might have more time accumulating consumable nutrients (sugars, proteins, lipids)
+			\item The scatter also shows that one would select crops that ripen later
+		\end{itemize}
+	
+		TGW $\times$ HEA
+		\begin{itemize}\spacing
+			\item TGW slightly anti-correlates with HEA (Heading Date)
+			\item But the scatter doesnt show that very clearly
+			\item One might select for early headers
+		\end{itemize}
+		
+		HEA $\times$ RIP
+		\begin{itemize}\spacing
+			\item Strong anti correlation
+			\item High chance of a co-regulated gene orchestration
+		\end{itemize}
+		
+		HEI $\times$ PM
+		\begin{itemize}\spacing
+			\item Maybe not relevant for breeding, but interesting behavior of barley, when they have weaker resistance against powder mildew, the crops heights reduce varaince and shrink 
+		\end{itemize}
+		
+	\newpage
+	
+	\section{GWAS}
+	
+		\subsection{Model Evalutation}
+		
+			Since I used two different models, I compare the QQ plots to pick the best model for this data. 
+		
+			\begin{tabular}{cc}
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.FarmCPU.HEA(NYC).pdf"} &
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.GLM.HEA(NYC).pdf"} \\
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.FarmCPU.TGW(NYC).pdf"} &
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.GLM.TGW(NYC).pdf"} \\
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.FarmCPU.HEI(NYC).pdf"} &
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.GLM.HEI(NYC).pdf"} \\
+			\end{tabular}
+			
+			\begin{tabular}{cc}
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.FarmCPU.RIP(NYC).pdf"} &
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.GLM.RIP(NYC).pdf"} \\
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.FarmCPU.PM(NYC).pdf"} &
+				\includegraphics[scale=0.6]{"./gapit/GAPIT.Association.QQ.GLM.PM(NYC).pdf"} \\
+			\end{tabular}
+		
+			\begin{itemize}
+				\item FarmCPU outperforms the GLM w.r.t. HEA, HEI, RIP
+				\item Both models perform equally w.r.t. TGW and PM
+				\item The GLM shows multiple observed p values that doesnt align with the expected (false-positives), but FarmCPU shows just a few outlier, this indicates that they are supposedly true-positives
+				\item Therefore, I use the FarmCPU as reference
+			\end{itemize}
+	
+		 \newpage
+	
+	
+		\subsection{Manhattan Plots}
+			
+			\textbf{FarmCPU (NYC, GAPIT) $\times$ GLM (NYC, GAPIT)}
+			\begin{center}
+				\begin{tabular}{cc}
+					HEA - FarmCPU  & HEA - GLM \\
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.FarmCPU.HEA(NYC).pdf"} &
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.GLM.HEA(NYC).pdf"} \\
+					TGW - FarmCPU  & TGW - GLM \\
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.FarmCPU.TGW(NYC).pdf"} &
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.GLM.TGW(NYC).pdf"}	\\
+					HEI FarmCPU & HEI - GLM \\
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.FarmCPU.HEI(NYC).pdf"} &
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.GLM.HEI(NYC).pdf"} \\
+					RIP FarmCPU & RIP - GLM \\
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.FarmCPU.RIP(NYC).pdf"} &
+					\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.GLM.RIP(NYC).pdf"}					
+				\end{tabular}
+			\end{center}	
+		\newpage
+	
+		\begin{center}
+			\begin{tabular}{cc}
+				PM - FarmCPU  & PM - GLM \\
+				\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.FarmCPU.PM(NYC).pdf"} &
+				\includegraphics[scale=0.3]{"./gapit/GAPIT.Association.Manhattan_Chro.GLM.PM(NYC).pdf"} \\
+			\end{tabular}
+		\end{center}
+	
+		
+		\subsection{Analysis}
+		
+			\textbf{HEA}
+			\begin{itemize}
+				\item Both model outputs are similiar (aligns with QQ)
+				\item FarmCPU identifies 2 Maker to be highly significant with a high $R^{2}$ (positional close)
+				\item Same region as GLM
+			\end{itemize}
+			
+			\textbf{TGW}
+			\begin{itemize}
+				\item Both models outputs identical (aligns with QQ)
+				\item TGW outputs aligns with the expected poly genetic orchestration of this quantitative trait
+				\item Meaning that no marker is surprisingly significant
+			\end{itemize}
+			
+			\textbf{HEI}
+			\begin{itemize}
+				\item Both model outputs are similiar (aligns with QQ)
+				\item FarmCPU identifies 1 Maker to be highly significant with a high $R^{2}$ 
+				\item FarmCPU identifies 1 Maker to be highly significant but low $R^{2}$ 
+				\item Same region as GLM
+			\end{itemize}
+			
+			\textbf{RIP}
+			\begin{itemize}
+				\item Both model outputs are similiar (aligns with QQ)
+				\item FarmCPU identifies 2 Maker to be highly significant with a high $R^{2}$ (positional close)
+				\item Both Markers seem to align with the markers found in HEA trait
+				\item These markers could correspond to the anti correlation found previously
+				\item Same region as GLM
+			\end{itemize}
+			
+			\textbf{PM}
+			\begin{itemize}
+				\item Both models outputs identical (aligns with QQ)
+				\item One can clearly see that  a wider genome region $(0.10-0.15 cM$) has a genetic pattern for the powdery mildew susceptibility (with ok'ish significance $p\approx0.05$, but not corrected)
+				\item One could dig into this pattern, since it might align with the phenotype distribution (not relevant for this report)
+			\end{itemize}												
+		
+		\newpage
+		
+		
+		\subsection{Significant Marker}
+			
+			\textbf{Linkage Disequilibrium (LD)}
+			
+				\begin{figure}[h!]
+					\centering
+					\includegraphics[scale=0.5]{"./LD/LD_significant_marker.png"}
+				\end{figure}
+				
+				\begin{itemize}
+					\item All significant marker pairs show a $LD > 0.8$, meaning that they are non-random associated markers (co-regulate traits)
+					\item This implies that a selection of an quantitative trait, based on one of these significant markers, also triggers another traits 		
+					\item This also implies that the effect are additive
+				\end{itemize}
+				
+			
+			\textbf{Phenotype Distribution - HEA}		
+				\begin{figure}[h!]
+					\centering
+					\includegraphics[scale=0.7]{"./gapit/GAPIT.Phenotype.Distribution_Significantmarkers.FarmCPU.HEA.pdf"}
+				\end{figure}
+				\begin{itemize}
+					\item $\alpha$(BK\_16) = +4.2
+					\item $\alpha$(SCRI\_RS\_155612) = +1.37
+					\item Both Marker are separated by 1.8 cM
+				\end{itemize}
+				\newpage
+				
+			\textbf{Phenotype Distribution - HEI}		
+				\begin{figure}[h!]
+					\centering
+					\includegraphics[scale=0.7]{"./gapit/GAPIT.Phenotype.Distribution_Significantmarkers.FarmCPU.HEI.pdf"}
+				\end{figure}
+				\begin{itemize}
+					\item $\alpha$(SCRI\_RS\_133377) = +2,62
+					\item $\alpha$(BK\_15) =  +4.42 
+					\item Both Markers are separated by 16.7 cM
+				\end{itemize}
+				
+			\textbf{Phenotype Distribution - RIP}		
+				\begin{figure}[h!]
+					\centering
+					\includegraphics[scale=0.7]{"./gapit/GAPIT.Phenotype.Distribution_Significantmarkers.FarmCPU.RIP.pdf"}
+				\end{figure}
+				\begin{itemize}
+					\item $\alpha$(SCRI\_RS\_170337) = -0.59
+					\item $\alpha$(SCRI\_RS\_155612) = -1.62
+					\item Both Marker are separated by 1.8cM
+				\end{itemize}
+					
+			\textbf{Remark}
+				\begin{itemize}
+					\item BK\_16 (HEA) = BK\_15 (HEI) = SCRI\_RS\_170337 (RIP) = 2.3 Mb
+					\item[$\to$] Selection of these Markers effects 3 traits (pleiotropy)!
+					\item SCRI\_RS\_155612 (HEA) = SCRI\_RS\_155612 (RIP) = 2.48 Mb (identical)
+					\item[$\to$] Selection on this Marker effects 2 traits (pleiotropy)!
+				\end{itemize}
+						
+
+			\newpage
+
+		\section{Marker-assisted selection (trait prediction)}
+		
+			\textbf{Formula:}
+			\begin{center}
+				\boxed{	y = \mu + \alpha_{marker} \cdot SNP + \epsilon}
+			\end{center}
+			
+ 			\begin{itemize}
+ 				\item $\mu$ = Phenotype (A)
+ 				\item $\alpha_{marker}$ = Effect at Marker
+ 				\item SNP = Genotype at SNP (or Marker)
+ 				\item Error
+ 			\end{itemize}
+		
+		
+			\textbf{Potential Targets} \\
+			
+				\begin{tabular}{llll}
+					Marker 1 & SCRI\_RS\_155612 				& 24.9cM & expected pleiotropic effect \\
+					Marker 2 & BK\_15, BK\_16, SCRI\_RS\_170337 & 23.0cM & expected pleiotropic effect (Multi-Marker complex)\\
+					Marker 3 & BKSCRI\_RS\_133377 				&  6.3cM & single trait\\
+				\end{tabular}
+			
+			\bigskip
+			\textbf{Predictions by Marker} \\
+			
+				\begin{tabular}{l|l|l|l|l|l}
+						 				& HEA (in days)		& HEI (in cm) 		& RIP (in days)		& TGW (in g/1000 grains) 		& PM (in score) \\ \hline
+					Marker 1 (SNP=B)	& +2.74 			&  --	 			& -3.24 			& --							& --			\\ \hline
+					Marker 2 (SNP=B)	& +8.40 			&  +8.84 			& -1.58 			& --							& --			\\ \hline
+					Marker 3 (SNP=B)	& -- 				&  +5.24 			& --	 			& --							& --			\\ \hline
+				\end{tabular} \\
+
+
+				\textbf{Note:} Multi-marker selection may show additive effects due to high LD between markers.
+			
+		\section{Breeding-Implications}
+			
+			\textbf{Grain production}
+			\begin{itemize}
+				\item  The data reveals that Allele A seems to be in favor for TGW (production), because it implies earliest heading and latest ripening in two markers, positivly effecting TGW (compare to a B Allele)
+			\end{itemize}
+			
+			\textbf{Animal Food Production}
+			\begin{itemize}
+				\item One might select for Marker 3 = Allele B, to get higher crops, with an acceptable effect on the other traits (from LD)
+			\end{itemize}
+			
+	
+
+\end{document}
