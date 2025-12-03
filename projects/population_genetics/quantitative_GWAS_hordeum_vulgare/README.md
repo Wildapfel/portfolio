@@ -13,3 +13,18 @@ In this project, I applied GAPIT to explore genotype-phenotype relationships and
 
 This data was provided during an exercise series in Population Genetics and Quantitative Genetics and includes phenotype trait data and genotype data. It consists of 120 breedling lines of barley with 93 known gene markers.
 </div>
+
+
+
+## Project Structure
+```
+quantitative_GWAS_hordeum_vulgare/  
+├── data/                   # The data 
+├── image/                  # image for the README
+├── notebooks/              # Chronological Pipeline
+├── notes/                  # Skretchen with xournal
+├── report/                 # Tex document, output tables and plots
+├── scripts/                # executables
+├── environment.yml         # Base environment   
+└── README.md               # Just the README  
+```
