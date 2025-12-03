@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+% Modern styling
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+\linespread{0.5}
+
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+
+\def\img_dir{"../reports/images"}
+
+
+\begin{document}
+	% Titleplage
+%	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Report: root-to-shoot ratio} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	\tableofcontents
+	\bigskip  
+	\bigskip  
+	\hrule
+	
+	\section{Summary}
+	
+		\textbf{Data Exploration}
+		\begin{itemize}
+			\item Root mass slightly more right-skewed then sprout mass
+			\item Sprout-root-mass-ratio shows stronger peak around 0.5 - 0.7
+			\item High correlation between sprout- and root-mass  ($r = 0.76$)
+		\end{itemize}
+		
+		\textbf{Marginal Distribution}
+		\begin{itemize}
+			\item Gamma fits data better then Normal, support with Kullback-Leibler-Divergence
+		\end{itemize}
+		
+		\textbf{Ratio Modeling}
+		\begin{itemize}
+			\item The theoretical model doesn't match the empirical distribution of the ratios
+			\item Supports statistical dependency of root- and sprout-mass
+		\end{itemize}
+		
+		\textbf{Interpretation}
+		\begin{itemize}
+			\item The growth of root and sprout might be statistical dependent (with statisitcal power)
+			\item Since the theoretical model under estimates the peak, one could argue that this ratio range might be a optima for breeding
+			\item Since I don't have much information about the data, I cannot interpret much about the biology
+		\end{itemize}
+		
+	\newpage
+	
+	\section{Data Exploration}
+
+		\subsection*{Data Distribution}
+	
+		
+			\begin{center}
+				\includegraphics[scale=0.5]{"\img_dir/01_histograms.png"}
+			\end{center}
+			
+			\textbf{Masses}
+			\begin{itemize}
+				\item The masses of sprouts and roots tend to be slightly right skewed (rechtsschief)  
+				\item $Weights \in \mathbb{R}_+$   
+				\item Just a normal distribution might now be appropriate, because its highly likely it will extend into the negatives and doesn't catch the skewness  
+				\item A Gamma might fits the marginal distribution better, because: $X \in \mathbb{R}_{+}$
+			\end{itemize}
+		
+			\textbf{Ratio}
+			\begin{itemize}
+				\item The skweness seem to not be present here   
+				\item $Ratio \in [0, 1]$    
+				\item Intuitivly (and by their definition) a beta might fit best here  
+			\end{itemize}
+		
+		\subsection*{Data Correlation}
+			\begin{center}
+				\includegraphics[scale=0.5]{"\img_dir//01_correlation.png"}
+			\end{center}
+			
+			\begin{itemize}
+				\item Hight correlation between the masses (=0.76)
+				\item Implying a statistical dependency between both parameters !!!
+			\end{itemize}	
+
+	
+	
+	\section{Marginal Distribution}
+		
+		\subsection*{Gamma fits data better then a Normal}
+			\begin{center}
+				\includegraphics[scale=0.5]{"\img_dir/02_est_distr.png"}		
+			\end{center}
+			
+			\begin{itemize}
+				\item Just visually I would argue that the Gamma fits  $X_{sprout}$ and $X_{root}$ better then a Normal  
+				\item Especially, since a Gamma can model the skweness of data
+				\item One can clearly see, that the normal extends into the negatives
+			\end{itemize}
+			
+		\subsection*{Further Evaluation with Kullback-Leibler-Divergence}
+		
+			\textbf{Sprout}	
+			\begin{center}
+				\includegraphics[scale=0.5]{"\img_dir//02_discr_sprout.png"}	
+			\end{center}
+				
+			\begin{center}
+				\begin{tabular}{ccc}
+					    & Gamma & Normal \\
+					KLD: & 0.01999 & 0.05624
+				\end{tabular}
+			\end{center}	
+			\begin{itemize}
+				\item Gamma has a much lower KLD 
+			\end{itemize}
+			\newpage
+			
+			\textbf{Root}	
+			\begin{center}
+				\includegraphics[scale=0.5]{"\img_dir//02_discr_root.png"}	
+			\end{center}
+			
+			\begin{center}
+				\begin{tabular}{ccc}
+					& Gamma & Normal \\
+					KLD: & 0.02861 & 0.06414
+				\end{tabular}
+			\end{center}	
+		
+			\begin{itemize}
+				\item Also here, Gamma has a much lower KLD 
+			\end{itemize}
+		
+		\textbf{Estimated parameters from Gamma (sprout and root)}
+		\begin{verbatim}
+			Params.       Value         
+			----------------------------
+			a_sprout      3.4580
+			b_sprout      0.2310
+			a_root        2.0912
+			b_root        0.2266
+		\end{verbatim}		
+
+		\begin{itemize}
+			\item One can notice that:  $\beta_{root} \approx \beta_{sprout}$
+			\item This supports the theoretical distrubtion for the ratio transformation later
+			\item But also that:  $\alpha_{root} < \alpha_{sprout}$, implying that the skewness of the root distribution is stronger !
+		\end{itemize}
+		\newpage
+	
+		
+	\section{Ratio-Modelling}
+	
+		\subsection*{Root-To-Sproot Ratio}
+			
+			\textbf{Theoretically}
+			
+			\begin{tabular}{ll}
+				$\quad X_1 \sim Ga(x_1| \alpha_1, \beta)$ & Shown in previous section \\
+				$\quad X_2 \sim Ga(x_2| \alpha_2, \beta)$ & Shown in previous section \\
+				$\quad Y = \frac{X_1}{X_1 + X_2}$ & Transformation \\
+				$\quad Y \sim Be(y|\alpha_1, \alpha_2)$ & Under the assumption that $\beta_{root} = \beta_{sprout} = \beta$ and $X_1 \perp\!\!\!\perp X_2 $  (independent). \\ 
+				& This was proven in our lectures.  
+			\end{tabular}
+			
+			- I can theoretically model the ratio with just the $\alpha$'s from the Marginal Gamma's
+	
+		\begin{center}
+			\includegraphics[scale=0.6]{"\img_dir/03_ratio_beta_modelling.png"}
+		\end{center}
+	
+		\begin{itemize}
+			\item One can clearly see that the theoretically derived beta distribution doesn't fit the empirical ratios
+		\end{itemize}
+		
+	\subsection*{Interpretation}
+	\begin{itemize}
+		\item The poor fit quality of the estimated beta distribution  is an indicator that both masses are statistically dependent and further supports the correlation 
+		\item This validates, that the correlation breaks the independency assumption of the theoretical beta
+		\item One could interpret that this peak is the result of stronger dependency (also correlation) of those seedlings masses
+		\item Unfortunately, I don't have to much information about the data, especially I don't know if certain seedlings perform better than other (for breeding purpose)
+		\item I could argue that this ratio range (0.5 - 0.7) might be a optimal target for breeding selection (with statistical power)
+	\end{itemize}
+	
+	
+\end{document}

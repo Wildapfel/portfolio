@@ -1,0 +1,9 @@
+name: stats-env
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - scipy
+  - matplotlib
+  - scikit-learn
+  - openpyxl      # for excel data
