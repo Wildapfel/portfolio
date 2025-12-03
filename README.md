@@ -28,8 +28,8 @@
     <!--  -->
     <!--Section: Statistical Modelling-->
     <!--  -->
-    <h1>🎯 Biostatistics 🎯 </h1>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/biostatistics/root_to_sproot">
+    <h1>🎯 Modelling 🎯 </h1>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/modelling/root_to_sproot">
         <strong wi>
             root-to-shoot ratio mass modelling in barley seedlings
         </strong>
