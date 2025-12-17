@@ -5,7 +5,8 @@
     <!-- Section: ML in Bioinformatics -->
     <h1>🧬  ML in Bioinformatics  🧬</h1>
         <strong> Clinical Trancritpomics-Classifier: </strong><br>
-        <strong> Leukemia-Classifiier from gene expression profiles </strong><br>
+        <strong> Leukemia-Classifier from Gene Expression Profiles </strong><br>
+        <i> Makefile  •  Sklearn </i>
         <strong> ***UPCOMING NEXT*** </strong>
     <br>
     <br>
