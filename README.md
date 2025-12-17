@@ -2,6 +2,14 @@
     <!-- top image -->
     <img src="./images/dna_alphabet.jpg" width="800" height="150" />
     <br>
+    <!-- Section: ML in Bioinformatics -->
+    <h1>🧬  ML in Bioinformatics  🧬</h1>
+        <strong> Clinical Trancritpomics-Classifier: </strong><br>
+        <strong> Leukemia-Classifiier from gene expression profiles </strong><br>
+        <strong> UPCOMING </strong>
+    <br>
+    <br>
+    <br>
     <!-- Section 1: RNE-seq -->
     <h1>🧬 Differential Gene Expression Analysis 🧬</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/DGEA/dgea_from_scratch">
