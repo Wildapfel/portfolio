@@ -1,0 +1,8 @@
+data:
+  X-test:            ./data/processed/bg_corrected_train_median_mad_test_scaled/GSE16455_test.csv
+  y-test:            ./data/raw/GSE16455/GSE16455_labels_cll_only.csv
+  labels:            [CLL, non-CLL]
+
+dirs:
+  models:            ./__experiments/03_bg_corrected_median_mad_scaled/classifiers/cll_assoc_probes/grid_search
+  eval:              ./__experiments/03_bg_corrected_median_mad_scaled/classifiers/cll_assoc_probes/eval_GSE16455_test

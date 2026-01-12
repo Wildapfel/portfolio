@@ -1,0 +1,945 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 40) (preloaded format=pdflatex 2024.10.17)  12 JAN 2026 06:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count271
+\Gm@cntv=\count272
+\c@Gm@tempcnt=\count273
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count274
+)
+\@linkdim=\dimen160
+\Hy@linkcounter=\count275
+\Hy@pagecounter=\count276
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count277
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count278
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen161
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count279
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count280
+\c@Item=\count281
+\c@Hfootnote=\count282
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count283
+\c@bookmark@seq@number=\count284
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count285
+\lst@gtempboxa=\box53
+\lst@token=\toks23
+\lst@length=\count286
+\lst@currlwidth=\dimen164
+\lst@column=\count287
+\lst@pos=\count288
+\lst@lostspace=\dimen165
+\lst@width=\dimen166
+\lst@newlines=\count289
+\lst@lineno=\count290
+\lst@maxwidth=\dimen167
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count291
+\lst@skipnumbers=\count292
+\lst@framebox=\box54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count293
+\l__pdf_internal_box=\box55
+)
+(./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count294
+\scratchdimen=\dimen168
+\scratchbox=\box56
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen169
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 21.
+(./report.out) (./report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+\c@lstlisting=\count300
+ (./report.toc)
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<./images/01_bg_corrected_all_samples/roc_knn.png, id=32, 330.9966pt x 323.7696
+pt>
+File: ./images/01_bg_corrected_all_samples/roc_knn.png Graphic file (type png)
+<use ./images/01_bg_corrected_all_samples/roc_knn.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_knn.png  used
+ on input line 43.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_logit.png, id=34, 330.9966pt x 323.76
+96pt>
+File: ./images/01_bg_corrected_all_samples/roc_logit.png Graphic file (type png
+)
+<use ./images/01_bg_corrected_all_samples/roc_logit.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_logit.png  us
+ed on input line 44.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_logit-weighted.png, id=35, 330.9966pt
+ x 323.7696pt>
+File: ./images/01_bg_corrected_all_samples/roc_logit-weighted.png Graphic file 
+(type png)
+<use ./images/01_bg_corrected_all_samples/roc_logit-weighted.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_logit-weighte
+d.png  used on input line 45.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_nb.png, id=36, 330.9966pt x 323.7696p
+t>
+File: ./images/01_bg_corrected_all_samples/roc_nb.png Graphic file (type png)
+<use ./images/01_bg_corrected_all_samples/roc_nb.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_nb.png  used 
+on input line 47.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_svm-linear.png, id=37, 330.9966pt x 3
+23.7696pt>
+File: ./images/01_bg_corrected_all_samples/roc_svm-linear.png Graphic file (typ
+e png)
+<use ./images/01_bg_corrected_all_samples/roc_svm-linear.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_svm-linear.pn
+g  used on input line 48.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_svm-linear-weighted.png, id=38, 330.9
+966pt x 323.7696pt>
+File: ./images/01_bg_corrected_all_samples/roc_svm-linear-weighted.png Graphic 
+file (type png)
+<use ./images/01_bg_corrected_all_samples/roc_svm-linear-weighted.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_svm-linear-we
+ighted.png  used on input line 49.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+File: ./images/01_bg_corrected_all_samples/roc_nb.png Graphic file (type png)
+<use ./images/01_bg_corrected_all_samples/roc_nb.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_nb.png  used 
+on input line 51.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_svm-rbf.png, id=39, 330.9966pt x 323.
+7696pt>
+File: ./images/01_bg_corrected_all_samples/roc_svm-rbf.png Graphic file (type p
+ng)
+<use ./images/01_bg_corrected_all_samples/roc_svm-rbf.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_svm-rbf.png  
+used on input line 52.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+<./images/01_bg_corrected_all_samples/roc_svm-rbf-weighted.png, id=40, 330.9966
+pt x 323.7696pt>
+File: ./images/01_bg_corrected_all_samples/roc_svm-rbf-weighted.png Graphic fil
+e (type png)
+<use ./images/01_bg_corrected_all_samples/roc_svm-rbf-weighted.png>
+Package pdftex.def Info: ./images/01_bg_corrected_all_samples/roc_svm-rbf-weigh
+ted.png  used on input line 53.
+(pdftex.def)             Requested size: 148.94708pt x 145.69498pt.
+ [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <.
+/images/01_bg_corrected_all_samples/roc_knn.png> <./images/01_bg_corrected_all_
+samples/roc_logit.png> <./images/01_bg_corrected_all_samples/roc_logit-weighted
+.png> <./images/01_bg_corrected_all_samples/roc_nb.png> <./images/01_bg_correct
+ed_all_samples/roc_svm-linear.png> <./images/01_bg_corrected_all_samples/roc_sv
+m-linear-weighted.png> <./images/01_bg_corrected_all_samples/roc_svm-rbf.png> <
+./images/01_bg_corrected_all_samples/roc_svm-rbf-weighted.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+<./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.png, id=55, 330.9966pt x 3
+23.7696pt>
+File: ./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.png Graphic file (typ
+e png)
+<use ./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.png>
+Package pdftex.def Info: ./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.pn
+g  used on input line 74.
+(pdftex.def)             Requested size: 165.49788pt x 161.8844pt.
+<./images/02_bg_corrected_mean_sd_scaled/pr_nb_test.png, id=56, 330.9966pt x 32
+3.7696pt>
+File: ./images/02_bg_corrected_mean_sd_scaled/pr_nb_test.png Graphic file (type
+ png)
+<use ./images/02_bg_corrected_mean_sd_scaled/pr_nb_test.png>
+Package pdftex.def Info: ./images/02_bg_corrected_mean_sd_scaled/pr_nb_test.png
+  used on input line 75.
+(pdftex.def)             Requested size: 165.49788pt x 161.8844pt.
+<./images/02_bg_corrected_mean_sd_scaled/roc_nb_train.png, id=57, 330.9966pt x 
+323.7696pt>
+File: ./images/02_bg_corrected_mean_sd_scaled/roc_nb_train.png Graphic file (ty
+pe png)
+<use ./images/02_bg_corrected_mean_sd_scaled/roc_nb_train.png>
+Package pdftex.def Info: ./images/02_bg_corrected_mean_sd_scaled/roc_nb_train.p
+ng  used on input line 77.
+(pdftex.def)             Requested size: 165.49788pt x 161.8844pt.
+<./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.png, id=58, 330.9966pt x 3
+23.7696pt>
+File: ./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.png Graphic file (typ
+e png)
+<use ./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.png>
+Package pdftex.def Info: ./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.pn
+g  used on input line 78.
+(pdftex.def)             Requested size: 165.49788pt x 161.8844pt.
+[3 <./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.png> <./images/02_bg_co
+rrected_mean_sd_scaled/pr_nb_test.png> <./images/02_bg_corrected_mean_sd_scaled
+/roc_nb_train.png> <./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.png>]
+<./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf.png, id=67, 330.9966pt 
+x 323.7696pt>
+File: ./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf.png Graphic file (
+type png)
+<use ./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf
+.png  used on input line 94.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/03_bg_corrected_median_mad_scaled/pr_svm-rbf.png, id=68, 330.9966pt x
+ 323.7696pt>
+File: ./images/03_bg_corrected_median_mad_scaled/pr_svm-rbf.png Graphic file (t
+ype png)
+<use ./images/03_bg_corrected_median_mad_scaled/pr_svm-rbf.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/pr_svm-rbf.
+png  used on input line 95.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_d.png, id=69, 547.0839pt
+ x 473.3685pt>
+File: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_d.png Graphic file 
+(type png)
+<use ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_d.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_
+d.png  used on input line 97.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_g.png, id=70, 547.0839pt
+ x 473.3685pt>
+File: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_g.png Graphic file 
+(type png)
+<use ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_g.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_
+g.png  used on input line 98.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_j.png, id=71, 547.0839pt
+ x 473.3685pt>
+File: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_j.png Graphic file 
+(type png)
+<use ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_j.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_
+j.png  used on input line 100.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_f1.png, id=72, 547.0839p
+t x 473.3685pt>
+File: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_f1.png Graphic file
+ (type png)
+<use ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_f1.png>
+Package pdftex.def Info: ./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_
+f1.png  used on input line 101.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+
+[4 <./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf.png> <./images/03_bg
+_corrected_median_mad_scaled/pr_svm-rbf.png> <./images/03_bg_corrected_median_m
+ad_scaled/cm_svm-rbf_d.png> <./images/03_bg_corrected_median_mad_scaled/cm_svm-
+rbf_g.png> <./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_j.png> <./ima
+ges/03_bg_corrected_median_mad_scaled/cm_svm-rbf_f1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_logit.png, id=83, 330.9
+966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_logit.png Graphic 
+file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_logit.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc
+_logit.png  used on input line 120.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_logit.png, id=84, 330.99
+66pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_logit.png Graphic f
+ile (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_logit.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_
+logit.png  used on input line 121.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_d.png, id=85, 547.
+0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_d.png Graphic
+ file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_d.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+logit_d.png  used on input line 123.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_g.png, id=86, 547.
+0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_g.png Graphic
+ file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_g.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+logit_g.png  used on input line 124.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_j.png, id=87, 547.
+0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_j.png Graphic
+ file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_j.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+logit_j.png  used on input line 126.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_f1.png, id=88, 547
+.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_f1.png Graphi
+c file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_f1.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+logit_f1.png  used on input line 127.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+[5 <./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_logit.png> <./images
+/04_bg_corrected_train_dqn_ext_test_scaled/pr_logit.png> <./images/04_bg_correc
+ted_train_dqn_ext_test_scaled/cm_logit_d.png> <./images/04_bg_corrected_train_d
+qn_ext_test_scaled/cm_logit_g.png> <./images/04_bg_corrected_train_dqn_ext_test
+_scaled/cm_logit_j.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+logit_f1.png>]
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png, id=100,
+ 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png Gra
+phic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc
+_svm-linear.png  used on input line 139.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png, id=101, 
+330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png Grap
+hic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_
+svm-linear.png  used on input line 140.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png, id=102
+, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png Gr
+aphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_d.png  used on input line 142.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png, id=103
+, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png Gr
+aphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_g.png  used on input line 143.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j.png, id=104
+, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j.png Gr
+aphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_j.png  used on input line 145.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1.png, id=10
+5, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1.png G
+raphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_f1.png  used on input line 146.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.png, i
+d=106, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.p
+ng Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.pn
+g>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc
+_svm-linear_train.png  used on input line 158.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.png, id
+=107, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.pn
+g Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.png
+>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_
+svm-linear_train.png  used on input line 159.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.png, 
+id=108, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.
+png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.p
+ng>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_d_train.png  used on input line 161.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.png, 
+id=109, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.
+png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.p
+ng>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_g_train.png  used on input line 162.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.png, 
+id=110, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.
+png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.p
+ng>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_j_train.png  used on input line 164.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train.png,
+ id=111, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train
+.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train.
+png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear_f1_train.png  used on input line 165.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+ [6 <./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png> <./
+images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png> <./images/0
+4_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png> <./images/04_bg_c
+orrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png> <./images/04_bg_correct
+ed_train_dqn_ext_test_scaled/cm_svm-linear_j.png> <./images/04_bg_corrected_tra
+in_dqn_ext_test_scaled/cm_svm-linear_f1.png>]
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear_f1_test2.pn
+g, id=122, 330.9966pt x 330.2739pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear_f1_tes
+t2.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear_f1_test
+2.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pro
+b_svm-linear_f1_test2.png  used on input line 180.
+(pdftex.def)             Requested size: 231.69603pt x 231.19014pt.
+ [7 <./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.pn
+g> <./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.png>
+ <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.png>
+ <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.png>
+ <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.png>
+ <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train.png
+>] [8 <./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear_f1_te
+st2.png>]
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted.png
+, id=139, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighte
+d.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted
+.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc
+_svm-linear-weighted.png  used on input line 202.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted.png,
+ id=140, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted
+.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted.
+png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_
+svm-linear-weighted.png  used on input line 203.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d.pn
+g, id=141, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_d.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+d.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_d.png  used on input line 204.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g.pn
+g, id=142, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_g.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+g.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_g.png  used on input line 205.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j.pn
+g, id=143, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_j.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+j.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_j.png  used on input line 206.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1.p
+ng, id=144, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_f1.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+f1.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_f1.png  used on input line 207.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+ [9 <./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted
+.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighte
+d.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weight
+ed_d.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-wei
+ghted_g.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-
+weighted_j.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-line
+ar-weighted_f1.png>]
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted_tra
+in.png, id=155, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighte
+d_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted
+_train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/roc
+_svm-linear-weighted_train.png  used on input line 217.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted_trai
+n.png, id=156, 330.9966pt x 323.7696pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted
+_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted_
+train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_
+svm-linear-weighted_train.png  used on input line 218.
+(pdftex.def)             Requested size: 198.59947pt x 194.26326pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d_tr
+ain.png, id=157, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_d_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+d_train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_d_train.png  used on input line 220.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g_tr
+ain.png, id=158, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_g_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+g_train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_g_train.png  used on input line 221.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j_tr
+ain.png, id=159, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_j_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+j_train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_j_train.png  used on input line 223.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1_t
+rain.png, id=160, 547.0839pt x 473.3685pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted
+_f1_train.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_
+f1_train.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_
+svm-linear-weighted_f1_train.png  used on input line 224.
+(pdftex.def)             Requested size: 196.95004pt x 170.41252pt.
+<./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear-weighted_f1
+_test2.png, id=161, 330.9966pt x 330.2739pt>
+File: ./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear-weight
+ed_f1_test2.png Graphic file (type png)
+<use ./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear-weighte
+d_f1_test2.png>
+Package pdftex.def Info: ./images/04_bg_corrected_train_dqn_ext_test_scaled/pro
+b_svm-linear-weighted_f1_test2.png  used on input line 230.
+(pdftex.def)             Requested size: 231.69603pt x 231.19014pt.
+ [10 <./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighte
+d_train.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-
+weighted_train.png> <./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-
+linear-weighted_d_train.png> <./images/04_bg_corrected_train_dqn_ext_test_scale
+d/cm_svm-linear-weighted_g_train.png> <./images/04_bg_corrected_train_dqn_ext_t
+est_scaled/cm_svm-linear-weighted_j_train.png> <./images/04_bg_corrected_train_
+dqn_ext_test_scaled/cm_svm-linear-weighted_f1_train.png>] [11 <./images/04_bg_c
+orrected_train_dqn_ext_test_scaled/prob_svm-linear-weighted_f1_test2.png>] (./r
+eport.aux)
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 889DE518390C63B17A30A7C2F0727410;759.
+ ) 
+Here is how much of TeX's memory you used:
+ 11653 strings out of 477985
+ 200621 string characters out of 5839369
+ 1856388 words of memory out of 6000000
+ 31656 multiletter control sequences out of 15000+600000
+ 515840 words of font info for 46 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 75i,11n,76p,521b,496s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on report.pdf (11 pages, 716357 bytes).
+PDF statistics:
+ 207 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+

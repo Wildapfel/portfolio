@@ -1,0 +1,234 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+
+\definecolor{codegray}{gray}{0.95}
+\lstset{
+	backgroundcolor=\color{codegray},
+	basicstyle=\ttfamily\small,
+	frame=single,
+	breaklines=true
+}
+
+\pagestyle{empty}
+
+
+\begin{document}
+	
+	% Titleplage
+	\pagestyle{empty}
+	\begin{center}
+		\LARGE
+		\textbf{Evaluation: Potential CLL-Classifiers} \vspace{0.5cm}
+		\hrule
+	\end{center}
+	
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Exp 01: Full Batch RMA}
+	
+		Since I introduced here intentionally strong data leakage, I will not investigate further after inspecting ROC curves of the trained model onto GSE131599-test.  \\
+	
+		\textbf{GSE131599-test (ROC)} 
+		\begin{center}
+			\begin{tabular}{ccc}
+				KNN & Logit & Logit-weighted \\
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_knn.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_logit.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_logit-weighted.png"} \\
+				NB & svm-linear & svm-linear-weighted \\
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_nb.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_svm-linear.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_svm-linear-weighted.png"} \\
+				svm-rbf & svm-lar-weighted & \\
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_nb.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_svm-rbf.png"} &
+				\includegraphics[scale=0.45]{"./images/01_bg_corrected_all_samples/roc_svm-rbf-weighted.png"} \\
+			\end{tabular}
+		\end{center}
+		\begin{itemize}
+			\item I intentionally produce some data leakge, I wanted to see the effect for scaling experiments combined with RMA
+			\item This approach is clearly not valid, since it produces over-promising results 
+			\item Big Red Flag !
+			\item Furthermore, also the prediction of GSE16455-test yields near perfect results, but i will not add those plots this report
+			\item I will not further investigate here
+		\end{itemize}
+		\newpage
+	
+	
+	
+	\section{Exp 02: Standard Scaling}
+	
+	Most of the models ROC-AUC of the GSE131599-test data set was mostly around 0.5 and is therefore not a valid model for a diagnostic classifier. I only found that the Naive Bayes model reached a ROC-AUC of 0.293. I investigated further, since on could flip the prediction logic here, to get a ROC-AUC of rougly 0.7.\\
+	
+	\begin{center}
+		\begin{tabular}{cc}
+			GSE131599-test NB-ROC & GSE131599-test NB-PR \\
+			\includegraphics[scale=0.5]{"./images/02_bg_corrected_mean_sd_scaled/roc_nb_test.png"} & 
+			\includegraphics[scale=0.5]{"./images/02_bg_corrected_mean_sd_scaled/pr_nb_test.png"} \\
+			GSE131599-train NB-ROC & GSE131599-train NB-PR \\
+			\includegraphics[scale=0.5]{"./images/02_bg_corrected_mean_sd_scaled/roc_nb_train.png"} & 
+			\includegraphics[scale=0.5]{"./images/02_bg_corrected_mean_sd_scaled/pr_nb_train.png"} \\
+		\end{tabular}
+	\end{center}
+	\begin{itemize}
+		\item Flipping the prediction logic, would be cherry-picking or the test data
+		\item Also, it would make the train evaluation badly ... 
+		\item Conclusion, Standard Scaling with a Naive Bayes doesn't yield a promising classifier
+	\end{itemize}
+	\newpage
+	
+	\section{Exp 03: Robust Scaling}
+	I found that the SVM-rbf performed onto the GSE13159-test very reasonable, so I investigated its performance further. I included the insepction of the confusion matrix (CM), when using different optimal threshold evaluated onto the train.
+
+	\begin{center}
+		\begin{tabular}{cc}
+			GSE131599-test SVM-rbf-ROC & GSE131599-test SVM-rbf-PR \\
+			\includegraphics[scale=0.6]{"./images/03_bg_corrected_median_mad_scaled/roc_svm-rbf.png"} &
+			\includegraphics[scale=0.6]{"./images/03_bg_corrected_median_mad_scaled/pr_svm-rbf.png"} \\
+			GSE131599-test SVM-rbf-CM default & GSE131599-test SVM-rbf-CM gmean\\
+			\includegraphics[scale=0.36]{"./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_d.png"} & 
+			\includegraphics[scale=0.36]{"./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_g.png"} \\
+			GSE131599-test SVM-rbf-CM Youden’s J statistic & GSE131599-test SVM-rbf-CM F1-Score \\
+			\includegraphics[scale=0.36]{"./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_j.png"} & 
+			\includegraphics[scale=0.36]{"./images/03_bg_corrected_median_mad_scaled/cm_svm-rbf_f1.png"} \\
+		\end{tabular}
+	\end{center}
+	
+	\begin{itemize}
+		\item One can clearly reason, that the ROC and PRC are promising, but looking at the actual predictions, the model only outputs a single class. that's a big Red flag, since the model doesn't generalize well (even with default threshold)
+	\end{itemize}
+	
+	\newpage
+	
+	
+	\section{Exp 04: RMA-train with Approximation-test}
+	
+		I found that 3 models (Logit, SVM-lnear, SVM-linear-weighted) had an ROC-AUC $>0.6$. Of course, this might not be the best performance, but considering that I approximated the RPM for the test data with a shift-scale-vector, working on noisy biological, older technology (microarray) and without batch correction, I would argue that this is the right direction to go. Those models could be a classifiers that actually learned biological signals and not just experimental artifacts ... \\
+	
+		\textbf{- Logit}
+		\begin{center}
+			\begin{tabular}{cc}
+				GSE13159-test Logit-ROC & GSE13159-test Logit-PR \\
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_logit.png"} &
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_logit.png"} \\
+				GSE131599-test Logit-CM default & GSE131599-test Logit-CM gmean\\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_d.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_g.png"} \\
+				GSE131599-test Logit-CM Youden’s J statistic & GSE131599-test Logit-CM F1-Score \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_j.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_logit_f1.png"} \\
+			\end{tabular}
+		\end{center}
+		\begin{itemize}
+			\item The CM reveals that the model predicts non-CLL class okish, but performance undesirably, predicting the CLL classes, what is for an diagnostic classifier not appropriate 
+		\end{itemize}
+		\newpage
+		
+		\textbf{- SVM linear}
+		\begin{center}
+			\begin{tabular}{cc}
+				GSE13159-test SVM linear-ROC & GSE13159-test SVM linear-PR \\
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png"} &
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png"} \\
+				GSE131599-train SVM linear-CM default & GSE131599-train SVM linear-CM gmean \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png"} \\
+				GSE131599-train SVM linear-CM Youden’s J statistic & GSE131599-train SVM linear-CM F1-Score \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1.png"} \\
+			\end{tabular}
+		\end{center}
+		\begin{itemize}
+			\item The default threshold yield a very good non-CLL classifier, but doesn't perform well on the CLL classfiication
+			\item Two threshold yields a kind of good direction, with $57.1\%$ CLL correct and $64.9\%$ non-CLL correct
+			\item But i would sanity check the train ROC and the CM for the both threshold next
+		\end{itemize}
+		
+		\begin{center}
+			\begin{tabular}{cc}
+				GSE13159-train SVM linear-ROC & GSE13159-train SVM linear-PR \\
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.png"} &
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.png"} \\
+				GSE131599-test SVM linear-CM default & GSE131599-test SVM linear-CM gmean \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.png"} \\
+				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-test SVM linear-CM F1-Score \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train.png"} \\
+			\end{tabular}
+		\end{center}
+		
+		\begin{itemize}
+			\item The classifier performs perfect onto the train data (data seems to be separable with an hyperplane)
+			\item Using the gmean threshold, yield a classifer that only predicts non-cll, so not valid at all
+			\item But using the Youden's statistic threshold, yield a reasonable trainining classification, and would align with the performance of the GSE13159-test 
+			\item So this model and this scaling seems to produce trustworthy predictions
+			\item I would next inspect the GSE16355-test performance, 
+		\end{itemize}
+				
+		\begin{center}
+			\begin{tabular}{c}
+				GSE16455-test SVM-linear Raw-Probabilities for samples \\
+				\includegraphics[scale=0.7]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear_f1_test2.png"}
+			\end{tabular}
+		\end{center}
+		
+		\begin{itemize}
+			\item I investigate the threshold from the Youden’s J statistic and found that it is: $0.824$
+			\item This would mean, considering this threhsold, that 7 / 17 would be classified correctly
+			\item Considering the default threshold of 0.5, i would get 10 / 17 correct, but at that threshold the GSE13159-test performance would predict CLL classes worse. 
+		\end{itemize}
+		
+		\textbf{Conclusion}
+		\begin{itemize}
+			\item I would argue that the SVM-linear onto the approxiamted scaling truely learns biolgical signal from this inehretly noise data 
+			\item I can truely ee that the shift-scaled approxiamtion of the RMA seems to work and performs better then just a standard or rbust scaling 
+		\end{itemize}
+		
+		
+		\newpage
+		
+		\textbf{- SVM linear weighted}
+		\begin{center}
+			\begin{tabular}{cc}
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted.png"} &
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted.png"} \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g.png"} \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1.png"} \\
+			\end{tabular}
+		\end{center}
+		
+	
+		\newpage
+	
+		\begin{center}
+			\begin{tabular}{cc}
+				GSE13159-train SVM linear-ROC & GSE13159-train SVM linear-PR \\
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted_train.png"} &
+				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted_train.png"} \\
+				GSE131599-test SVM linear-CM default & GSE131599-test SVM linear-CM gmean \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d_train.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g_train.png"} \\
+				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-test SVM linear-CM-weighted F1-Score \\
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j_train.png"} & 
+				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1_train.png"} \\
+			\end{tabular}
+		\end{center}
+		\begin{center}
+			\begin{tabular}{c}
+				GSE16455-test SVM-linear Raw-Probabilities for samples \\
+				\includegraphics[scale=0.7]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear-weighted_f1_test2.png"}
+			\end{tabular}
+		\end{center}
+		
+\end{document}
