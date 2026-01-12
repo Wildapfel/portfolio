@@ -2,3 +2,4 @@
 # Exclude html files from github language stats 
 #
 *.html linguist-vendored
+*.ipynb linguist-vendored
