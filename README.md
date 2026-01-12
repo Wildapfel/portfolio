@@ -4,9 +4,9 @@
     <br>
     <!-- Section: ML in Bioinformatics -->
     <h1>🧬  ML in Bioinformatics  🧬</h1>
-        <strong> Clinical Trancritpomics-Classifier: </strong><br>
-        <strong> Leukemia-Classifier from Gene Expression Profiles </strong><br>
-        <i> Makefile  •  Sklearn </i><br>
+        <strong> Machine learning on public cross-experimental microarray</strong><br>
+        <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
+        <i> Makefile • Sklearn </i><br>
         <strong> ***UPCOMING NEXT*** </strong>
     <br>
     <br>
