@@ -1,5 +1,5 @@
 #
-# Exclude html files from github language stats 
+# Exclude notebooks from github language stats, 
+# sicne they prouce big chunk of HTML stats... 
 #
-*.html linguist-vendored
 *.ipynb linguist-vendored
