@@ -9,7 +9,7 @@
         <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
     </a>
     <i> Makefile • Sklearn </i><br>
-    I am currently uploading.
+    Currently __demo__ is not working. I will fix that tomorrow. 
     <br>
     <br>
     <br>
