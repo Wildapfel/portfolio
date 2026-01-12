@@ -4,8 +4,8 @@
 #   disease as I specfiy here (this for GSE16455)
 #
 
-import sys, signal, time
-from multiprocessing import Pool, cpu_count
+import sys, signal
+from multiprocessing import Pool
 from functools import partial
 import GEOparse
 import numpy as np
@@ -24,10 +24,9 @@ def init_worker():
 def extract_leukemia_class(geo_id, dest_dir=None):
 
     try:   
-    
         gsm = GEOparse.get_GEO(geo=geo_id, destdir=dest_dir, silent=True, how="brief")
         metadata = gsm.metadata
-    
+
         if 'characteristics_ch1' in metadata:
             
             # if gsm.metadata["characteristics_ch1"][0].split(sep=":")[0] == "sample type":
@@ -64,7 +63,8 @@ def main():
     try:
         with Pool(processes=num_workers, initializer=init_worker) as pool:
             worker_func = partial(extract_leukemia_class, dest_dir="./geo_cache")
-            
+            print("hello world")
+
             # Process with progress updates
             for i, result in enumerate(pool.imap_unordered(worker_func, geo_list, chunksize=10)):
                 results.append(result)
@@ -76,12 +76,12 @@ def main():
     except KeyboardInterrupt:
         print("\nProcess interrupted. Saving partial results...")
     
-    # df = pd.DataFrame(results, columns=['GSM_ID', "Sample_Type", 'Disease'])
-    df = pd.DataFrame(results, columns=["GSM_ID", "Disease"])
-    # df.dropna(axis=1, inplace=True)
-    df.set_index('GSM_ID', inplace=True)
-    df.sort_index(inplace=True)
-    df.to_csv(f"{OUT_FILE}")
+    # # df = pd.DataFrame(results, columns=['GSM_ID', "Sample_Type", 'Disease'])
+    # df = pd.DataFrame(results, columns=["GSM_ID", "Disease"])
+    # # df.dropna(axis=1, inplace=True)
+    # df.set_index('GSM_ID', inplace=True)
+    # df.sort_index(inplace=True)
+    # df.to_csv(f"{OUT_FILE}")
     
 
 if __name__ == '__main__':
