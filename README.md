@@ -4,10 +4,11 @@
     <br>
     <!-- Section: ML in Bioinformatics -->
     <h1>🧬  ML in Bioinformatics  🧬</h1>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/ML/cll_classifier">
         <strong> Machine learning on public cross-experimental microarray</strong><br>
         <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
-        <i> Makefile • Sklearn </i><br>
-        <strong> ***UPCOMING NEXT*** </strong>
+    </a>
+    <i> Makefile • Sklearn </i><br>
     <br>
     <br>
     <br>
