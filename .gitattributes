@@ -1,2 +1,3 @@
 *.ipynb linguist-vendored
 *.html linguist-vendored
+report/**/*.html linguist-vendored
