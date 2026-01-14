@@ -4,7 +4,7 @@ This project arose from the idea that I wanted to use transciprtional data to tr
 
 
 ### About
-- I trained multiple ML algorithms with different scalings onto the peripheral blood train subset of GSE13159 using CLL associated gene feature selection
+- I trained multiple ML algorithms with different scalings onto the peripheral blood train subset of GSE13159 using CLL associated gene feature selection 
 - I evaluted their performance onto a within-expierment test set
 - Furhter I investigate how the probability outputs align with the CLL classes of a different experiment: GSE16455 (cross-experiment)
 
@@ -41,19 +41,35 @@ cll_classifier/
 
 
 ```bash
-# Install dependencies into conda environment
+# I am using this ocker image for my r native packages 
+docker build -f docker/r-bioinfo/Dockerfile_v2.0.dockerfile -t r-bioinfo_v2.0
+```
+
+```bash
+# Install base-dependencies into conda environment
 conda env create -f env.yml -y 
+```
+
+```bash
+# Activate env
 conda activate demo-env
 ```
 
-
 ```bash
-# Change workig directory to __demo__
+# Change dir
 cd __demo__
 ```
 
 ```bash
-# Prepare data
+# Install some plotting functionality form my repo, clone that into src
+git clone git@github.com:Wildapfel/plotwrapper.git src/plotwrapper
+cd src/plotwrapper
+conda develop .
+cd .. && cd ..
+```
+
+```bash
+# Get data
 make -f Makefiles/data.mk all
 ```
 

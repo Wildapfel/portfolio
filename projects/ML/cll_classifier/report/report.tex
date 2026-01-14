@@ -30,6 +30,49 @@
 	
 	
 	\tableofcontents
+	\section{Summary}
+		\subsection*{Exp01}
+			\begin{itemize}
+				\item Computed the RMA for the concatenated GSE13159 and GSE16455 superset (before I split train/ test)
+				\item This is clear data leakage, because I transform train and test sets into a similar space, therefore test validations are invalid
+				\item This is not how real-world ML prediction work... You usually take parameters from a train set to sale the test data
+				\item This approach might be appropriate for biological processing, since it inherently removes noise 
+			\end{itemize}
+		
+		\subsection*{Exp02}
+			\begin{itemize}
+				\item Classical Standard Scaling considering train and test set separate
+				\item Meaning that I compute the test scaling from estimated parameters of the train set
+			\end{itemize}
+		
+		\subsection*{Exp03}
+			\begin{itemize}
+				\item Classical Robust Scaling considering train and test set separate
+				\item Meaning that I compute the test scaling from estimated parameters of the train set
+			\end{itemize}
+		
+		\subsection*{Exp04}
+			\begin{itemize}
+				\item I got idea to approximate the RMA test sets with a shift-scale-vector estimated from train data
+			\end{itemize}
+			\begin{align*}
+				\mu^{*} &= \mu^{[1]} - \mu^{[0]} \\
+				\sigma^{*} &= \frac{\sigma^{[1]}}{\sigma^{[0]} + \epsilon} \\
+				\implies& X^{scaled} = (X^{unscaled} + \mu^{*}) * \sigma^{*} \tag*{Approximation}
+			\end{align*}
+	
+		\subsection{Conclusion}
+			
+			\begin{itemize}
+				\item The most valid models seems to be a class weighted linear SVM model onto the approximated scaling
+				\item I aim that this model didn't learn experimental artifact but rather true biological signals, further validated cross-experimentally
+			\end{itemize}
+
+			
+	
+	
+	
+	
 	\newpage
 	
 	\section{Exp 01: Full Batch RMA}
@@ -138,10 +181,10 @@
 				GSE13159-test SVM linear-ROC & GSE13159-test SVM linear-PR \\
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear.png"} &
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear.png"} \\
-				GSE131599-train SVM linear-CM default & GSE131599-train SVM linear-CM gmean \\
+				GSE131599-test SVM linear-CM default & GSE131599-test SVM linear-CM gmean \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g.png"} \\
-				GSE131599-train SVM linear-CM Youden’s J statistic & GSE131599-train SVM linear-CM F1-Score \\
+				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-testSVM linear-CM F1-Score \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1.png"} \\
 			\end{tabular}
@@ -157,15 +200,15 @@
 				GSE13159-train SVM linear-ROC & GSE13159-train SVM linear-PR \\
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear_train.png"} &
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear_train.png"} \\
-				GSE131599-test SVM linear-CM default & GSE131599-test SVM linear-CM gmean \\
+				GSE131599-train SVM linear-CM default & GSE131599-train SVM linear-CM gmean \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_d_train.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_g_train.png"} \\
-				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-test SVM linear-CM F1-Score \\
+				GSE131599-train SVM linear-CM Youden’s J statistic & GSE131599-train SVM linear-CM F1-Score \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_j_train.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear_f1_train.png"} \\
 			\end{tabular}
 		\end{center}
-		
+				
 		\begin{itemize}
 			\item The classifier performs perfect onto the train data (data seems to be separable with an hyperplane)
 			\item Using the gmean threshold, yield a classifer that only predicts non-cll, so not valid at all
@@ -182,15 +225,17 @@
 		\end{center}
 		
 		\begin{itemize}
-			\item I investigate the threshold from the Youden’s J statistic and found that it is: $0.824$
-			\item This would mean, considering this threhsold, that 7 / 17 would be classified correctly
-			\item Considering the default threshold of 0.5, i would get 10 / 17 correct, but at that threshold the GSE13159-test performance would predict CLL classes worse. 
+			\item GSE16455-test with acc(default) = 0.59 is fine, but model has very low true positives on the GSE13159-test (not valid)
+			\item GSE16455-test with acc(gmean) = 0.41, yield a okisch classification for GSE13159-test, but only predicts non-CLL onto GSE13159-train (not valid)
+			\item GSE16455-test with acc(J stat.) = 0.41, yield a okisch classification for GSE13159-test, also learned pattern in train data (most valid)
+			\item GSE16455-test with acc(f1) = 1.0, only outputs  non-CLL classification for GSE13159-test
 		\end{itemize}
 		
 		\textbf{Conclusion}
 		\begin{itemize}
-			\item I would argue that the SVM-linear onto the approxiamted scaling truely learns biolgical signal from this inehretly noise data 
-			\item I can truely ee that the shift-scaled approxiamtion of the RMA seems to work and performs better then just a standard or rbust scaling 
+			\item I would argue that the SVM-linear onto the approxiamted scaling truely learns biological signals from this inherently noise data 
+			\item I can see that the shift-scaled approxiamtion of the RMA seems to work and performs better then just a standard or robust or standard scaling 
+			\item Considering the GSE13159-train, GSE13159-test and GSE16455-test evaluation, it seems that the optimal threshold for the Yourdan's statistics performs best  
 		\end{itemize}
 		
 		
@@ -199,15 +244,22 @@
 		\textbf{- SVM linear weighted}
 		\begin{center}
 			\begin{tabular}{cc}
+				GSE13159-test SVM linear-ROC & GSE13159-test SVM linear-PR \\
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted.png"} &
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted.png"} \\
+				GSE13159-test SVM linear-CM default & GSE13159-test SVM linear-CM gmean \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g.png"} \\
+				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-test SVM linear-CM F1-Score \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1.png"} \\
 			\end{tabular}
 		\end{center}
-		
+		\begin{itemize}
+			\item The CM reveals that the model predicts reasonable with the f1-score optimizing threshold, the rest only output CLL classes 
+			\item I noticed that the correct classification of CLL classes is close to 0.8 but only roughly 0.4 non-CLL classes were labeled correctly
+			\item Considering these numbers, this would be a better medical classifier, then the SVM-linear without class weights, because detecting CLL classes correctly, might be more relevant (diagnostically speaking), then non-CLL classes
+		\end{itemize}
 	
 		\newpage
 	
@@ -216,19 +268,35 @@
 				GSE13159-train SVM linear-ROC & GSE13159-train SVM linear-PR \\
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/roc_svm-linear-weighted_train.png"} &
 				\includegraphics[scale=0.6]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/pr_svm-linear-weighted_train.png"} \\
-				GSE131599-test SVM linear-CM default & GSE131599-test SVM linear-CM gmean \\
+				GSE131599-train SVM linear-CM default & GSE131599-train SVM linear-CM gmean \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_d_train.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_g_train.png"} \\
-				GSE131599-test SVM linear-CM Youden’s J statistic & GSE131599-test SVM linear-CM-weighted F1-Score \\
+				GSE131599-train SVM linear-CM Youden’s J statistic & GSE131599-train SVM linear-CM-weighted F1-Score \\
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_j_train.png"} & 
 				\includegraphics[scale=0.36]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/cm_svm-linear-weighted_f1_train.png"} \\
 			\end{tabular}
 		\end{center}
+		\begin{itemize}
+			\item The CM reveals that the model predicts reasonable with the f1-score optimizing threshold for the same threshold then the GSE13159-test
+		\end{itemize}
+		
 		\begin{center}
 			\begin{tabular}{c}
-				GSE16455-test SVM-linear Raw-Probabilities for samples \\
+				GSE16455-test SVM-linear-weighted Raw-Probabilities for samples \\
 				\includegraphics[scale=0.7]{"./images/04_bg_corrected_train_dqn_ext_test_scaled/prob_svm-linear-weighted_f1_test2.png"}
 			\end{tabular}
 		\end{center}
+		\begin{itemize}
+			\item GSE16455-test with acc(default) = 0.0 (not valid)
+			\item GSE16455-test with acc(gmean) = 0.0, (not valid)
+			\item GSE16455-test with acc(J stat.) = 0.0 (not valid)
+			\item GSE16455-test with acc(f1) = 0.53, this seems to be the most valid and promising model for this task,  $CM_{train}(\text{CLL}) = 0.987; CM_{train}(\text{non-CLL}) = 0.61; CM_{test}(\text{CLL}) = 0.786; CM_{test}(\text{non-CLL}) = 0.404$
+		\end{itemize}
+		
+		\textbf{Conclusion}
+		\begin{itemize}
+			\item The SVM-linear with class weights seem to be the most valid model
+			\item Especially the fact, that for an medical classifier, the TP are high, without cherry picking for threshold, just using an mathematical optimal threshold
+		\end{itemize}
 		
 \end{document}
