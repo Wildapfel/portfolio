@@ -8,8 +8,7 @@
         <strong> Machine learning on public cross-experimental microarray</strong><br>
         <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
     </a>
-    <i> Makefile • Sklearn </i><br>
-    Currently __demo__ is not working. I will fix that tomorrow. 
+    <i> CEL files • Makefile • Sklearn • RMA   </i><br>
     <br>
     <br>
     <br>
