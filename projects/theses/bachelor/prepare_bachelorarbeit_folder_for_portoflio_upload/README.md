@@ -30,7 +30,7 @@ The maximum spatial distribution of the tracked blastomeres in embryo 2 mapped o
 <img src="images_refactored/zelllinienstammbaum_e2_02.png" width=700>
 
 #### Cell nuclei volume over time from embryo 2
-Some example plots from the quantitative analysis of emryo 2.
+Shows the plots of the quantitative analysis of emryo 2 from fertilization to the second split.
 
 <p float="left">
     <img src="./images_refactored/Oocyte_.png" width="250" />
@@ -40,6 +40,12 @@ Some example plots from the quantitative analysis of emryo 2.
 
 
 #### Cell nuclei voulme comarison over time
+I only show some reference points that I want to demonstrate here. It demonstrates the third split during the early embryogenesis (A->1A 1a; B->1B 1b; C->1C 1c; D->1D 1d). 
+
+E1 = Embryo 1 (left)
+
+E2 = embryo 2 (right)
+
 <p float="left">
     <img src="./images_refactored/1A_1a_1A_1a_.png" width="250" />
     <img src="./images_refactored/1B_1b_1B_1b_.png" width="250" /> 
