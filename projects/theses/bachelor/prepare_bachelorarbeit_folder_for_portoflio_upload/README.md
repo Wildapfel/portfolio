@@ -23,8 +23,27 @@ History of the training from the model on embryo I.
   <img src="./images_refactored/Velust-Zeit-Diagramm.png" width="200" /> 
 </p>
 
-#### Cell Linakge with mapped 
-The maximum spatial distribution of the tracked blastomeres in embroy 2 mapped onto the cell lineage (from tracking). 
+#### Cell Lineage with maximum spatial distribution  
+The maximum spatial distribution of the tracked blastomeres in embryo 2 mapped onto the cell lineage (from tracking). 
 
 <img src="images_refactored/zelllinienstammbaum_e2_01.png" width=700>
 <img src="images_refactored/zelllinienstammbaum_e2_02.png" width=700>
+
+#### Cell nuclei volume over time from embryo 2
+Some example plots from the quantitative analysis of emryo 2.
+
+<p float="left">
+    <img src="./images_refactored/Oocyte_.png" width="250" />
+    <img src="./images_refactored/AB_CD.png" width="250" /> 
+    <img src="./images_refactored/A_B_C_D.png" width="250" /> 
+</p>
+
+
+#### Cell nuclei voulme comarison over time
+<p float="left">
+    <img src="./images_refactored/1A_1a_1A_1a_.png" width="250" />
+    <img src="./images_refactored/1B_1b_1B_1b_.png" width="250" /> 
+    <img src="./images_refactored/1C_1c_1c1_1c2_.png" width="250" /> 
+    <img src="./images_refactored/1D_1d_1D_1d_.png" width="250" /> 
+</p>
+
