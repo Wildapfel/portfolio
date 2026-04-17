@@ -7,8 +7,7 @@ The goal of thesis was to apply instance segmentation (supervised) in a developm
 
 
 #### Results
-
-*Model Training History 
+Model Training History 
 
 <img src="./images_refactored/Genauigkeits-Zeit-Diagramm.png" alt="drawing" width="200"/>
 <img src="./images_refactored/Velust-Zeit-Diagramm.png" alt="drawing" width="200"/>
