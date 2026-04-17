@@ -24,9 +24,7 @@ History of the training from the model on embryo I.
 </p>
 
 #### Cell Linakge with mapped 
-The maximum spatial distribution of the tracked blastomeres mapped onto the cell linage (from tracking). 
+The maximum spatial distribution of the tracked blastomeres in embroy 2 mapped onto the cell lineage (from tracking). 
 
-<!-- <p float="left"> -->
 <img src="images_refactored/zelllinienstammbaum_e2_01.png" width=700>
 <img src="images_refactored/zelllinienstammbaum_e2_02.png" width=700>
-<!-- </p> -->
