@@ -47,9 +47,9 @@ E1 = Embryo 1 (left)
 E2 = embryo 2 (right)
 
 <p float="left">
-    <img src="./images_refactored/1A_1a_1A_1a_.png" width="250" />
-    <img src="./images_refactored/1B_1b_1B_1b_.png" width="250" /> 
-    <img src="./images_refactored/1C_1c_1c1_1c2_.png" width="250" /> 
-    <img src="./images_refactored/1D_1d_1D_1d_.png" width="250" /> 
+    <img src="./images_refactored/1A_1a_1A_1a_.png" width="350" />
+    <img src="./images_refactored/1B_1b_1B_1b_.png" width="350" /> 
+    <img src="./images_refactored/1C_1c_1c1_1c2_.png" width="350" /> 
+    <img src="./images_refactored/1D_1d_1D_1d_.png" width="350" /> 
 </p>
 
