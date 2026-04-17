@@ -11,7 +11,19 @@ The goal of thesis was to apply instance segmentation (supervised) in a developm
 
 
 ## Background
+#### Spiral Cleavage
+- a conserved, early embryonic development pattern in spiralian animals (molluscs, annelids, platyhelminths and other taxa)
 
+  <img src="./images_refactored/spiralfurchung_edit.png" width=300>
+
+#### *Macrostomum lignano*
+- a free-living, hermaphroditic flatworm
+- model organism for regeneration research
+
+  <img src="./images_refactored/macrostomum_lignano.png" width=300>
+
+#### Model 
+https://github.com/juglab/EmbedSeg
 
 
 ## Results
