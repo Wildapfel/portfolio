@@ -70,30 +70,30 @@ cd .. && cd ..
 
 ```bash
 # Get data
-make -f Makefiles/data.mk all
+make -f makefiles/data.mk all
 ```
 
 ```bash
 # Preprocess data
-make -f Makefiles/preprocess.mk all
+make -f makefiles/preprocess.mk all
 ```
 
 ```bash
 # Run first Experiment
-make -f Makefiles/exp.mk exp01_train && make -f Makefiles/exp.mk exp01_eval
+make -f makefiles/exp.mk exp01_train && make -f makefiles/exp.mk exp01_eval
 ```
 
 ```bash
 # Run second Experiment
-make -f Makefiles/exp.mk exp02_train && make -f Makefiles/exp.mk exp02_eval
+make -f makefiles/exp.mk exp02_train && make -f makefiles/exp.mk exp02_eval
 ```
 
 ```bash
 # Run third Experiment
-make -f Makefiles/exp.mk exp03_train && make -f Makefiles/exp.mk exp03_eval
+make -f makefiles/exp.mk exp03_train && make -f makefiles/exp.mk exp03_eval
 ```
 
 ```bash
 # Run fourth Experiment
-make -f Makefiles/exp.mk exp04_train && make -f Makefiles/exp.mk exp04_eval
+make -f makefiles/exp.mk exp04_train && make -f makefiles/exp.mk exp04_eval
 ```
