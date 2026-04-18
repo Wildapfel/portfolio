@@ -2,7 +2,26 @@
     <!-- top image -->
     <img src="./images/dna_alphabet.jpg" width="800" height="150" />
     <br>
+    <!--  -->
+    <!-- Section: Theses -->
+    <!--  -->
+    <h1>🔬 Theses 🔬</h1>
+    <i>(Master's Thesis)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/master">
+        <strong> Methods for interpreting neuronal nets in sequence data analysis</strong><br> 
+    </a>
+    <br>
+    <i>(Bachelor's Thesis)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
+        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
+        <strong> early embryonic development of Macrostomum Lignano </strong><br>
+        <strong> (Plathelminthes, Macrostomorpha)</strong>
+    </a>
+    <br>
+    <br>
+    <!--  -->
     <!-- Section: ML in Bioinformatics -->
+    <!--  -->
     <h1>🧬  ML in Bioinformatics  🧬</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/ML/cll_classifier">
         <strong> Machine learning on public cross-experimental microarray</strong><br>
@@ -10,9 +29,9 @@
     </a>
     <i> CEL files • Makefile • Sklearn • RMA   </i><br>
     <br>
-    <br>
-    <br>
+    <!--  -->
     <!-- Section 1: RNE-seq -->
+    <!--  -->
     <h1>🧬 Differential Gene Expression Analysis 🧬</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/DGEA/dgea_from_scratch">
         <strong> Functional analysis of ABF2/ABF3 transcriptional Targets on </strong><br>
@@ -49,19 +68,4 @@
     <small><i>Python • Jupyter • Pandas • Matplotlib • Scipy</i></small>
     <br>
     <br>
-    <!--  -->
-    <!-- Section: Theses -->
-    <!--  -->
-    <h1>🔬 Theses 🔬</h1>
-    <i>(Master's Thesis)</i><br>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/master">
-        <strong> Methods for interpreting neuronal nets in sequence data analysis</strong><br> 
-    </a>
-    <br>
-    <i>(Bachelor's Thesis)</i><br>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
-        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
-        <strong> early embryonic development of Macrostomum Lignano </strong><br>
-        <strong> (Plathelminthes, Macrostomorpha)</strong>
-    </a>
 </div>
