@@ -62,10 +62,4 @@
         <strong> early embryonic development of Macrostomum Lignano </strong><br>
         <strong> (Plathelminthes, Macrostomorpha) (Bachelor's Thesis) </strong>
     </a>
-    <br>
-    <!--  -->
-    <!-- Section: Bachelor Thesis -->
-    <!--  -->
-    <h1>🔬  🔬</h1>
-    
 </div>
