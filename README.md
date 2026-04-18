@@ -54,9 +54,8 @@
     <!--  -->
     <h1>🔬 Master's Thesis 🔬 </h1>
     <strong>
-        Methods for the interpreation of neural Networks in seuence data analysis
+        Methods for interpreting neuronal nets in sequence data analysis.  
         <br>  
-        UPCOMING
     </strong>
     <br>
     <br>   
@@ -65,13 +64,11 @@
     <!-- Section: Bachelor Thesis -->
     <!--  -->
     <h1>🔬 Bachelor's Thesis 🔬</h1>
-    <strong>
-        Quantitative Image-Analysis of Blastomeres in the Early Embryonic Development 
-        <br>
-        of <i>Macrstomum lignano</i>        
-        <br>  
-        UPCOMING
-    </strong>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
+        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
+        <strong> early embryonic development of Macrostomum Lignano </strong><br>
+        <strong> (Plathelminthes, Macrostomorpha). </strong>
+    </a>
     <!--  -->
     <!-- Section: Sequential Modelling -->
     <!--  -->
