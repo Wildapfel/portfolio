@@ -127,13 +127,25 @@ COLOR_WHITE='\e[1;37m'
 #
 BACHELORARBEIT_PROJECT_DIR="/run/media/maxpetzold/HDD_5TB/HUB_PARA/projects/active/prepare_bachelorarbeit_folder_for_portoflio_upload"
 BACHELORARBEIT_PORTFOLIO_DIR="/run/media/maxpetzold/HDD_5TB/HUB_PARA/areas/Wildapfel/portfolio/projects/theses/bachelor"
-
 mkdir -p $BACHELORARBEIT_PORTFOLIO_DIR
 rsync -r \
     --delete \
     $BACHELORARBEIT_PROJECT_DIR \
     $BACHELORARBEIT_PORTFOLIO_DIR
 echo -e "${COLOR_LIGHT_BLUE}Synced bachelorarbeit${COLOR_NC}"
+
+#
+# masterarbeit
+#
+MASTERARBEIT_PROJECT_DIR="/run/media/maxpetzold/HDD_5TB/HUB_PARA/projects/active/prepare_masterarbeit_folder_for_portfolio_upload"
+MASTERARBEIT_PORTFOLIO_DIR="/run/media/maxpetzold/HDD_5TB/HUB_PARA/areas/Wildapfel/portfolio/projects/theses/master"
+mkdir -p $MASTERARBEIT_PORTFOLIO_DIR
+rsync -r \
+    --delete \
+    $MASTERARBEIT_PROJECT_DIR \
+    $MASTERARBEIT_PORTFOLIO_DIR
+echo -e "${COLOR_LIGHT_BLUE}Synced masterarbeit${COLOR_NC}"
+
 
 #
 # Docker
