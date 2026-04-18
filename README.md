@@ -50,21 +50,22 @@
     <br>
     <br>
     <!--  -->
-    <!-- Section: Master Thesis -->
+    <!-- Section: Theses -->
     <!--  -->
-    <h1>🔬 Masters's Thesis 🔬</h1>
+    <h1>🔬 Theses 🔬</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/master">
-        <strong> Methods for interpreting neuronal nets in sequence data analysis </strong><br>
+        <strong> Methods for interpreting neuronal nets in sequence data analysis (Master's Thesis)</strong><br> 
+    </a>
+    <br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
+        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
+        <strong> early embryonic development of Macrostomum Lignano </strong><br>
+        <strong> (Plathelminthes, Macrostomorpha) (Bachelor's Thesis) </strong>
     </a>
     <br>
     <!--  -->
     <!-- Section: Bachelor Thesis -->
     <!--  -->
-    <h1>🔬 Bachelor's Thesis 🔬</h1>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
-        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
-        <strong> early embryonic development of Macrostomum Lignano </strong><br>
-        <strong> (Plathelminthes, Macrostomorpha) </strong>
-    </a>
-   
+    <h1>🔬  🔬</h1>
+    
 </div>
