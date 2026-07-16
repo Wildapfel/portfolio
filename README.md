@@ -19,18 +19,27 @@
     </a>
     <br>
     <br>
-    <h1>Omics</h1>
-    <i>(Pangenomics)</i><br>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/pangenome/homo-sapiens-chr21">
-        <strong> Building and Inspecting the pangenome Chr21 of homo spaiens </strong><br> 
-    </a>
-    <br>
     <i>(Bachelor's Thesis)</i><br>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
         <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
         <strong> early embryonic development of Macrostomum Lignano </strong><br>
         <strong> (Plathelminthes, Macrostomorpha)</strong>
     </a>
+    <!-- Section: Omics -->
+    <h1>Omics</h1>
+    <i>(Pangenomics)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/pangenome/homo-sapiens-chr21">
+        <strong> Building and Inspecting the pangenome Chr21 of homo spaiens </strong><br> 
+    </a>
+    <br>
+    <i>(Transcriptomics)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/DGEA/dgea_from_scratch">
+        <strong> Functional analysis of ABF2/ABF3 transcriptional Targets on </strong><br>
+        <strong> published RNA-seq data using Conda, Snakemake and Docker </strong>
+    </a>
+    <br>
+    <i> Raw Reads • fastqc • Kallisto • DESeq2 • clusterProfiler </i><br> 
+    <i>Snakemake  • Conda • Docker • R • Python • Latex </i>
     <br>
     <br>
     <!--  -->
@@ -42,18 +51,6 @@
         <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
     </a>
     <i> CEL files • Makefile • Sklearn • RMA   </i><br>
-    <br>
-    <!--  -->
-    <!-- Section 1: RNE-seq -->
-    <!--  -->
-    <h1>🧬 Differential Gene Expression Analysis 🧬</h1>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/DGEA/dgea_from_scratch">
-        <strong> Functional analysis of ABF2/ABF3 transcriptional Targets on </strong><br>
-        <strong> published RNA-seq data using Conda, Snakemake and Docker </strong>
-    </a>
-    <br>
-    <i> Raw Reads • fastqc • Kallisto • DESeq2 • clusterProfiler </i><br> 
-    <i>Snakemake  • Conda • Docker • R • Python • Latex </i>
     <br>
     <br>
     <!--  -->
