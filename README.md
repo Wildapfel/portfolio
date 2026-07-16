@@ -19,12 +19,6 @@
     </a>
     <br>
     <br>
-    <i>(Bachelor's Thesis)</i><br>
-    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
-        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
-        <strong> early embryonic development of Macrostomum Lignano </strong><br>
-        <strong> (Plathelminthes, Macrostomorpha)</strong>
-    </a>
     <!-- Section: Omics -->
     <h1>Omics</h1>
     <i>(Pangenomics)</i><br>
