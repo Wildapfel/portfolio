@@ -26,7 +26,7 @@
         <strong> Building and Inspecting the pangenome Chr21 of homo spaiens </strong>
     </a>
     <br>
-    <i> Assembled Genomes  • minigraph • Bandage • Snakemake</i><br> 
+    <i> Assembled Genomes  • minigraph • Bandage • Snakemake • Docker</i><br> 
     <br>
     <i>(Transcriptomics)</i><br>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/DGEA/dgea_from_scratch">
