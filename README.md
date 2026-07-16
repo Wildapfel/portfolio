@@ -19,6 +19,20 @@
     </a>
     <br>
     <br>
+    <h1>Omics</h1>
+    <i>(Pangenomics)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/pangenome/homo-sapiens-chr21">
+        <strong> Building and Inspecting the pangenome Chr21 of homo spaiens </strong><br> 
+    </a>
+    <br>
+    <i>(Bachelor's Thesis)</i><br>
+    <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/bachelor">
+        <strong> Quantitative Image-Analysis of Blastomeres in the </strong><br>
+        <strong> early embryonic development of Macrostomum Lignano </strong><br>
+        <strong> (Plathelminthes, Macrostomorpha)</strong>
+    </a>
+    <br>
+    <br>
     <!--  -->
     <!-- Section: ML in Bioinformatics -->
     <!--  -->
