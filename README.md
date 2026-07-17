@@ -5,7 +5,7 @@
     <!--  -->
     <!-- Section: Theses -->
     <!--  -->
-    <h1>🔬 Theses 🔬</h1>
+    <h1>Theses</h1>
     <i>(Master's Thesis)</i><br>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/theses/master">
         <strong> Methods for interpreting neuronal nets in sequence data analysis</strong><br> 
@@ -41,7 +41,7 @@
     <!--  -->
     <!-- Section: ML in Bioinformatics -->
     <!--  -->
-    <h1>🧬  ML in Bioinformatics  🧬</h1>
+    <h1>ML in Bioinformatics</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/ML/cll_classifier">
         <strong> Machine learning on public cross-experimental microarray</strong><br>
         <strong> blood samples for Chronic Lymphocytic Leukemia (CLL) diagnosis </strong><br>
@@ -52,7 +52,7 @@
     <!--  -->
     <!--Section: GWAS -->
     <!--  -->
-    <h1> 📊 Population Genetics 📊 </h1>
+    <h1>Population Genetics</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/population_genetics/quantitative_GWAS_hordeum_vulgare" >
         <source> Identifying QTL's for marker assisted selection in barley population using GAPIT (GWAS) </source>
     </a>
@@ -64,7 +64,7 @@
     <!--  -->
     <!--Section: Statistical Modelling-->
     <!--  -->
-    <h1>🎯 Modelling 🎯 </h1>
+    <h1>Modelling</h1>
     <a href="https://github.com/Wildapfel/portfolio/tree/master/projects/modelling/root_to_sproot">
         <strong wi>
             root-to-shoot ratio mass modelling in barley seedlings
